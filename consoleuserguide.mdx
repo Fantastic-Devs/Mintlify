@@ -44,3 +44,56 @@ This chart shows the top three reasons for unsuccessful lookups and splits them 
 Data Filters  
 
 There are 3 filters that can be applied to the map, they are available on the top left of the map: 
+
+
+Lookup Reponses 
+
+ 
+
+- **Inside location**<br /> 
+This is returned if the device requests a location from within the designated jurisdiction  
+
+- **Outside location**<br />
+This is returned by the middleware when it detects that the device is outside of location 
+
+- **Device not supported**<br />
+This is returned when the SDK detects that the device does not support GPS 
+
+- **Unknown location**<br />
+This is returned if the device requests a location check before the service has completely started and therefore, we do not have a current location for the device. 
+
+- **Location disabled**<br />
+This is returned when the SDK detects that the device has disabled its GPS 
+
+- **Modified device**<br />
+This is returned if the SDK detects that the device is jailbroken 
+
+- **Mock location detected**<br />
+This is returned if the SDK detects that the location is simulated by software (i.e. FakeGPS) 
+
+- **Undetermined location**<br />
+Should never happen – occurs when we have bad config in the DB for that app and not able to determine if it is inside or not 
+
+- **Developer Mode**<br />
+This is returned if the SDK detects that device is running in developer mode 
+
+- **Device Blocked**<br />
+This is returned if the backend system finds this device on a blocked accounts list 
+
+- **Account Blocked**<br />
+This is returned if the backend system finds this account on a blocked accounts list 
+
+- **Global Blocked**<br />
+This is returned when the middleware detects that the Device is on the GeoSafe’s Global Blocked list, which means the device is blocked across all jurisdictions 
+
+- **Proxy Detected**<br />
+This is returned if the backend system finds determines that this device is running a VPN 
+
+- **Other**<br />
+Any other reason other than these listed 
+
+ 
+
+ 
+
+ 
