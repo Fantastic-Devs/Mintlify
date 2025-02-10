@@ -137,12 +137,34 @@ There are 3 filters that can be applied to the map, they are available on the to
   
   <tr>
     <td>
-      <img src="images/outside.png" />
+      <img src="images/developer-mode.png" />
     </td>
     <td>&nbsp;</td>
     <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
+      <b>Developer Mode</b><br />
+          This is returned if the SDK detects that device is running in developer mode
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <img src="images/device-blocked.png" />
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <b>Device Blocked</b><br />
+          This is returned if the backend system finds this device on a blocked accounts list
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <img src="images/account_blocked.png" />
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <b>Account Blocked</b><br />
+          This is returned if the backend system finds this account on a blocked accounts list
     </td>
   </tr>
   
@@ -152,82 +174,36 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;</td>
     <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
+      <b>Global Blocked</b><br />
+          This is returned when the middleware detects that the Device is on the GeoSafe’s Global Blocked list, which means the device is blocked across all jurisdictions
     </td>
   </tr>
   
   <tr>
     <td>
-      <img src="images/outside.png" />
+      <img src="images/proxy-detected.png" />
     </td>
     <td>&nbsp;</td>
     <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
+      <b>Proxy Detected</b><br />
+          This is returned if the backend system finds determines that this device is running a VPN
     </td>
   </tr>
-  
+    
   <tr>
     <td>
-      <img src="images/outside.png" />
+      <img src="images/other.png" />
     </td>
     <td>&nbsp;</td>
     <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/outside.png" />
-    </td>
-    <td>&nbsp;</td>
-    <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
+      <b>Other</b><br />
+         Any other reason other than these listed 
     </td>
   </tr>
 </table>
 
 
 
-- ****<br />
- 
-
-- ****<br />
- 
-
-- ****<br />
- 
-
-- ****<br />
- 
-
-- ****<br />
-
-
-- ****<br />
- 
-
-- **Developer Mode**<br />
-This is returned if the SDK detects that device is running in developer mode 
-
-- **Device Blocked**<br />
-This is returned if the backend system finds this device on a blocked accounts list 
-
-- **Account Blocked**<br />
-This is returned if the backend system finds this account on a blocked accounts list 
-
-- **Global Blocked**<br />
-This is returned when the middleware detects that the Device is on the GeoSafe’s Global Blocked list, which means the device is blocked across all jurisdictions 
-
-- **Proxy Detected**<br />
-This is returned if the backend system finds determines that this device is running a VPN 
-
-- **Other**<br />
-Any other reason other than these listed 
 
  
 
