@@ -1,0 +1,250 @@
+#ACTGeoSDK Android SDK#          
+
+###Version: 0.1###
+
+##Overview##
+
+ACTGeoSDK is an Android SDK designed for compliance purposes. This SDK ensures that the user's location complies with regulatory requirements by performing checks and providing the necessary feedback to your application. 
+
+Integration 
+
+Manual Integration 
+
+Download the SDK 
+
+Obtain the latest version of the ACTGeoSDK from Fantastic Tech. 
+
+Add the SDK to Your Project 
+
+Put the downloaded .aar file into the application module’s lib folder *usually you can find it at app/libs, if it is not exist, create the lib folder within the app folder). 
+
+Open the application module’s build.gradle file (usually you can find it at app/build.gradle). 
+
+In the depencencies section, add the following line: 
+ 
+
+Also, as the SDK is included as .aar file, you need to manually add the used dependencies if they are still not used: 
+ 
+
+For testing purposes, you also can add the following dependencies: 
+ 
+
+Press the Sync Now link at the top or select File/Sync Gradle files menu to ensure that all the gradle dependencies are synced. 
+
+You are ready to use the SDK! 
+
+Import the SDK 
+
+In the files where you want to use the SDK, import the necessary used classes as you usually do. 
+
+Usage 
+
+1. Initialising the SDK 
+
+Before using the SDK, you need to initialise it with your API key and configuration. 
+
+Configuration 
+
+You need to add your configuration values into the manifest file (AndroidManifest.xml) in the application module (usually you can find it at app/src/main/AndroidManifest.xml): 
+
+A képen szöveg, képernyőkép, Betűtípus látható
+
+Automatikusan generált leírás 
+
+Installation 
+
+Inject the LocationHandler instance in the constructor of your ViewModel: 
+
+A képen szöveg, Betűtípus, képernyőkép, sor látható
+
+Automatikusan generált leírás 
+
+Then you can initialize using the SDK in your ViewModel and you also can save the status of the initialization: 
+
+A képen szöveg, képernyőkép, Betűtípus látható
+
+Automatikusan generált leírás 
+
+2. Starting the Location Checks 
+
+Once the SDK is initialised, you can start the location checks by observing the results in the LocationHandler instance. 
+
+Observe the results 
+
+Start a new coroutine scope where you can collect the emitted results: 
+
+A képen szöveg, képernyőkép, Betűtípus látható
+
+Automatikusan generált leírás 
+
+Start Checks 
+
+Start the location checks: 
+
+A képen szöveg, Betűtípus, képernyőkép, tervezés látható
+
+Automatikusan generált leírás 
+
+Clean up when you finished 
+
+Call the LocationHandler’s destroy() method if you finished working with the SDK: 
+
+A képen szöveg, Betűtípus, képernyőkép látható
+
+Automatikusan generált leírás 
+
+3. Requesting Location Status 
+
+You can request the current location status by calling the requestForLocationStatus method on the IO thread. This method will return the result of LocationCheckResult via a returning value, after you might want to go back to the main thread to process the value (or use a MutableStatusFlow). 
+
+You might expect to get null there as long as there were no emitted LocationCheckResult instance yet, which means that the SDK does not have location information yet, so it cannot get the location status either. 
+
+A képen szöveg, képernyőkép, Betűtípus látható
+
+Automatikusan generált leírás 
+
+4. Stopping the Checks 
+
+To stop the location monitoring, use the stop method. 
+
+A képen szöveg, Betűtípus, képernyőkép, tervezés látható
+
+Automatikusan generált leírás 
+
+API Reference 
+
+LocationHandler 
+
+Properties 
+
+result: A flow property where you can get the continuous location report. 
+
+log: A flow property where you can get the SDK log. 
+
+accuracy: An enum property where you can set the location accuracy / device resource consuming behaviour. 
+
+distanceInMeter: A Float property where you can set the minimal distance between location alerts. 
+
+updateFRequency: A Long value where you can set the delay between location alerts. 
+
+result: A flow property where you can get the continuous location report. 
+
+Methods 
+
+initialize(): Initialises the SDK. 
+
+Parameters: 
+
+callback (isInitialized: Boolean) -> Unit: A callback which reports to the app whether the initialization process finished correctly. 
+
+start(): Starts the location monitoring. 
+
+stop(): Stops the location monitoring. 
+
+destroy(): Clears internal logging and emits a null value as result. 
+
+requestForLocationStatus(Requests the current location status. 
+
+Parameters: 
+
+accountId: An accountId you would like to get the location status report with. 
+
+reason: The reason of getting the location status report. 
+
+ 
+
+Enums 
+
+HardwareStatus 
+
+STATUS_INITIALIZING: Indicates an initializing value for this enum. 
+
+STATUS_OK: Indicates that the current device looks acceptable. 
+
+STATUS_ROOTED_DEVICE: Indicates that the current device looks to be rooted. 
+
+STATUS_EMULATED_DEVICE: Indicates that the current device looks to be an emulator. 
+
+STATUS_PERMISSIONS_MISSING: Indicates that the application does not have the proper permissions to operate. In this case, the application needs to request for the fine and/or coarse location permission and call the start() method again. 
+
+STATUS_DEVELOPER_OPTIONS_ENABLED: Indicates that the developer settings are enabled on the current device. 
+
+STATUS_PROXY_ENABLED: Indicates that a proxy has been set up on the current network. 
+
+STATUS_RESTRICTED_SOFTWARE_FOUND: Indicates that a GPS spoofing application can be found on the current device. 
+
+STATUS_INITIALIZATION_FAILED: Indicates that the initialization call was failed to run. 
+
+LocationStatus 
+
+STATUS_INITIALIZING: Indicates an initializing value for this enum. 
+
+STATUS_OK: Indicates that the current location looks inside the area. 
+
+STATUS_LOCATION_UNCLEAR: Indicates that the current location has not enough information to be accepted (like the country code is OK but the postal code is missing or vice versa). 
+
+STATUS_LOCATION_NO: Indicates that the current location looks ouside the area. 
+
+STATUS_LOCATION_MOCK: Indicates that the current location comes from a mock provider. 
+
+STATUS_LOCATION_HARDWARE_INCOMPATIBLE: Indicates that the current device did not meet the necessary criteria in the hardware checking phase. In this case, the location checks aren’t run, and you need to ask the user to fix the issues (marked orange) or change the device as the issues are not fixable (marked red). 
+
+ReasonForLookup 
+
+login: Indicates the reason for the location lookup. 
+
+validate: Indicates the reason for the location lookup. 
+
+placeBet: Indicates the reason for the location lookup. 
+
+purchase: Indicates the reason for the location lookup. 
+
+BoundingBoxCorners 
+
+NorthWest: Indicates the northwest corner of the bounding box. 
+
+NorthEast: Indicates the northeast corner of the bounding box. 
+
+SouthWest: Indicates the southwest corner of the bounding box. 
+
+SouthEast: Indicates the southeast corner of the bounding box. 
+
+Accuracy 
+
+PRIORITY_BALANCED_POWER_ACCURACY: Requests a tradeoff that is balanced between location accuracy and power usage. 
+
+PRIORITY_LOW_POWER: Requests a tradeoff that favors low power usage at the possible expense of location accuracy. 
+
+PRIORITY_HIGH_ACCURACY: Requests a tradeoff that favors highly accurate locations at the possible expense of additional power usage. 
+
+PRIORITY_PASSIVE: Ensures that no extra power will be used to derive locations. This enforces that the request will act as a passive listener that will only receive "free" locations calculated on behalf of other clients, and no locations will be calculated on behalf of only this request. 
+
+ 
+
+Entities 
+
+AddressResult 
+
+Properties 
+
+address: An optional Address value where you can get the geocoded address for a location. 
+
+isValid: Indicates whether the given address is meet with the given criteria in the location check phase. 
+
+LocationCheckResult 
+
+Properties 
+
+location: A Location property where you can get the current location fix. 
+
+boundingBoxResults: A map property where you can get the validity information about the bounding box corners. The hardware statuses will be the same as in this entity, but you can expect different locationStatus and/pr addressResult value. 
+
+addressResult: An AddressResult property where you can get the validity information about the current location. 
+
+hardwareStatus: An enum property where you can get any value of HardwareStatus enum. 
+
+locationStatus: An enum property where you can get any value of LocationStatus enum. 
+
+reasonForFailure: An enum property where you can get the error reported by backend service (usually during the location report call). 
+
+exception: A Throwable property where you can have any internally caught exception. 
