@@ -27,8 +27,10 @@ Obtain the latest version of the ACTGeoSDK from Fantastic Tech.
 ### **Import the SDK**
  
 In the files where you want to use the SDK, import it as follows: 
- 
-**import ACTGeoSDK** 
+
+```java
+import ACTGeoSDK 
+```
 
 ## **Usage** 
 
@@ -36,24 +38,24 @@ Adding Location Permissions to the App's Info.plist
 
 To ensure the ACTGeoSDK functions correctly, add location permissions to your app's Info.plist file. Include the following keys with appropriate messages that inform users why location access is necessary: 
 
+```java
 <key>NSLocationWhenInUseUsageDescription</key> 
 <string>We require your location to ensure compliance with regulatory requirements.</string> 
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key> 
 <string>Your location helps us to verify compliance status.</string> 
-
- 
+```
 
 Requesting Location Permissions 
 
 Ensure your app requests location permissions when initialising the SDK. Implement the location permission prompt in the app as follows: 
 
+```java
 import CoreLocation 
- 
+
 let locationManager = CLLocationManager() 
 locationManager.requestWhenInUseAuthorization() 
 // or locationManager.requestAlwaysAuthorization() if needed 
-
- 
+```
 
 1. Initialising the SDK 
 
