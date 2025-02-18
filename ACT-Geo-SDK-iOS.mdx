@@ -267,24 +267,20 @@ ACTGeoSDK.shared.stopTimeBasedChecks()
     - `config`: An instance of ACTSDKModel.Config containing the configuration settings. 
 
 - `setInitDelegate(_:)': Sets the delegate to receive initialisation callbacks. 
-##### **Parameters:**
+    - ##### **Parameters:**
+    - `delegate`: An instance of ACTInitialiseDelegate. 
 
-- `delegate`: An instance of ACTInitialiseDelegate. 
 - `setCheckDelegate(_:)`: Sets the delegate to receive location check callbacks. 
-##### **Parameters:**
-
-- `delegate': An instance of ACTCheckDelegate. 
+    - ##### **Parameters:**
+    - `delegate': An instance of ACTCheckDelegate. 
 
 - `startChecks(delegate:)`: Starts the location checks with an optional account ID and delegate 
-##### **Parameters:**
-
-- `delegate': An optional instance of ACTCheckDelegate. 
+    - ##### **Parameters:**
+    - `delegate': An optional instance of ACTCheckDelegate. 
 
 - `requestLocationStatus(completion:)`: Requests the current location status. 
-##### **Parameters:**: 
-
-- `completion`: A closure that takes a String parameter representing the location status. 
-
+    - ##### **Parameters:**
+    - `completion`: A closure that takes a String parameter representing the location status. 
 - `stopChecks()`: Stops the location monitoring. 
 
 ### **Protocols**
@@ -292,53 +288,37 @@ ACTGeoSDK.shared.stopTimeBasedChecks()
 #### **ACTInitialiseDelegate**
 
 - `initialiseCompleted()`: Called when the SDK is initialised successfully. 
-
 - `initialiseFailed(error:)`: Called when the SDK initialisation fails. 
-
-##### **Parameters:**
-
-- `error`: An instance of ACTSDKModel.InitError representing the error that occurred. 
+    - ##### **Parameters:**
+    - `error`: An instance of ACTSDKModel.InitError representing the error that occurred. 
 
 #### **ACTCheckDelegate**
 
 - `checksStarted()': Called when the location checks start successfully. 
-
 - `checkStartFailed(error:)`: Called when the location checks fail to start. 
-
-##### **Parameters:**
-
-- `error`: An instance of ACTSDKModel.StartError representing the error that occurred. 
-
+    - ##### **Parameters:**
+    - `error`: An instance of ACTSDKModel.StartError representing the error that occurred. 
 - `locationStatusChanged()`: Called when there is a change in the device location status. 
-
-##### **Parameters:**
--none 
+    - ##### **Parameters:**
+    - none 
 
 ### **Enums**
 
 #### **ACTSDKModel.InitError**
 
 - `apiKeyWrong': Indicates an incorrect API key. 
-
 - `networkError': Indicates a network error. 
-
 - `other(message:)': Indicates other errors with a custom message.
-
-##### **Description:** 
-
-- `description': A String   
+    - ##### **Description:** 
+    - `description': A String   
 
 #### **ACTSDKModel.StartError**
 
 - `jailbroken': Indicates the device is jailbroken. *TODO: remove next version 
-
 - `locationPermissions': Indicates location permissions are needed. 
-
 - `other(message:)': Indicates other errors with a custom message. 
-
-##### **Description:** 
-
-- `description': A String  
+    - ##### **Description:** 
+    - `description': A String 
 
 #### **ACTSDKModel.LocationCheckResult**
 
