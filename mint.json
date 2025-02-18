@@ -3,7 +3,7 @@
   "name": "Starter Kit",
   "logo": {
     "dark": "/logo/ACT_logo_dark.svg",
-    "light": "/logo/ACT_logo_light.svg"
+    "light": "/logo/ACT_logo_white.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
