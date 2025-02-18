@@ -244,7 +244,7 @@ ACTGeoSDK.shared.startTimeBasedChecks(
 ) 
 ```
 
-Stopping Time-Based Checks 
+### **Stopping Time-Based Checks**
 
 Stop the time based location checks with the stopTimeBasedChecks function: 
 
@@ -254,13 +254,13 @@ ACTGeoSDK.shared.stopTimeBasedChecks()
 
 ## API Reference 
 
-ACTGeoSDK 
+### **ACTGeoSDK**
 
-Properties 
+#### **Properties**
 
 shared: The singleton instance of ACTGeoSDK. 
 
-Methods 
+#### **Methods**
 
 install(apiKey:config:): Initialises the SDK with the provided API key and configuration. 
 Parameters: 
@@ -291,9 +291,9 @@ completion: A closure that takes a String parameter representing the location st
 
 stopChecks(): Stops the location monitoring. 
 
-Protocols 
+### **Protocols**
 
-ACTInitialiseDelegate 
+#### **ACTInitialiseDelegate**
 
 initialiseCompleted(): Called when the SDK is initialised successfully. 
 
@@ -302,7 +302,7 @@ Parameters:
 
 error: An instance of ACTSDKModel.InitError representing the error that occurred. 
 
-ACTCheckDelegate 
+#### **ACTCheckDelegate**
 
 checksStarted(): Called when the location checks start successfully. 
 
@@ -314,9 +314,9 @@ error: An instance of ACTSDKModel.StartError representing the error that occurre
 locationStatusChanged(): Called when there is a change in the device location status. 
 Parameters: none 
 
-Enums 
+### **Enums**
 
-ACTSDKModel.InitError 
+#### **ACTSDKModel.InitError**
 
 apiKeyWrong: Indicates an incorrect API key. 
 
@@ -327,7 +327,7 @@ Description:
 
 description: A String 
 
-ACTSDKModel.StartError 
+#### **ACTSDKModel.StartError**
 
 jailbroken: Indicates the device is jailbroken. *TODO: remove next version 
 
@@ -338,7 +338,7 @@ Description:
 
 description: A String  
 
-ACTSDKModel.LocationCheckResult 
+#### **ACTSDKModel.LocationCheckResult**
 
 simulatedBySoftware(location:referenceID:): Indicates the location is simulated by software and provides a referenceID. 
 
@@ -348,4 +348,4 @@ locationSuccess(location:referenceID:): Indicates the location is verified succe
 
 other(location:message:): Indicates other location results with a custom message  
 
-jailbro
+jailbroken(location:referenceID:): Indicates the device is jailbroken and provides a referenceID. 
