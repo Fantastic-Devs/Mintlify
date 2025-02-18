@@ -65,6 +65,7 @@ Configuration
 
 Create an instance of the configuration and set the necessary properties: 
 
+```java
     let env: ACTSDKModel.Config.Level = .debug //or .production 
     //Debug ENV will ignore simulator errors. 
 
@@ -74,22 +75,24 @@ Create an instance of the configuration and set the necessary properties:
         .baseURL("sandbox_url") //or production_url 
 
         .build() 
+```
 
 Installation 
 
 Install the SDK with your API key and the configuration: 
 
-    // Set the delegate for initialisation 
+```java
+// Set the delegate for initialisation 
     ACTGeoSDK.shared.setInitDelegate(self) 
- 
+
     ACTGeoSDK.shared.install(apiKey: "your_api_key", config: config) 
+```
 
 Initialisation Delegate 
 
 Implement the ACTInitialiseDelegate to handle initialisation callbacks: 
 
- 
-
+```java
 extension YourViewController: ACTInitialiseDelegate { 
      
     func initialiseCompleted() { 
@@ -111,8 +114,7 @@ extension YourViewController: ACTInitialiseDelegate {
         } 
     } 
 } 
-
- 
+``` 
 
 2. Starting the On Demand Location Checks 
 
@@ -122,28 +124,23 @@ Set the Check Delegate
 
 Set the delegate to handle location check callbacks: 
 
- 
-
+```java
 ACTGeoSDK.shared.setCheckDelegate(self) 
-
- 
+``` 
 
 Start Checks 
 
 Start the location checks with an optional account ID: 
 
- 
-
+```java
 ACTGeoSDK.shared.startChecks(delegate: self) 
-
+```
  
-
 Check Delegate 
 
 Implement the ACTCheckDelegate to handle check events: 
 
- 
-
+```java
 extension NetworkManager: ACTCheckDelegate { 
     func checksStarted() { 
         print("Location checks started successfully.") 
@@ -167,13 +164,13 @@ extension NetworkManager: ACTCheckDelegate {
         // Perform a location status request to update the user interaction. 
     } 
 } 
-
- 
+``` 
 
 3. Requesting Location Status 
 
 You can request the current location status by calling the requestLocationStatus method. This method will return the result of LocationCheckResult via a completion handler. 
 
+```java
 enum ReasonForLookup: Int { 
     case login = 0 
     case validate = 1 
@@ -204,12 +201,15 @@ ACTGeoSDK.shared.requestLocationStatus(accountID, reasonForLookup.rawValue)  { r
     case .none: break 
     } 
 } 
+```
 
 4. Stopping the Checks 
 
 To stop the location monitoring, use the stopChecks method. 
 
+```java
 ACTGeoSDK.shared.stopChecks() 
+```
 
 5. Starting the Time Based Location Checks 
 
@@ -217,6 +217,7 @@ Once the SDK is initialised the developer can set time based checks as well. Thi
 
 To start time-based checks, use the startTimeBasedChecks method: 
 
+```java
 ACTGeoSDK.shared.startTimeBasedChecks(  
   interval: 30, // Use predefined interval  
   reasonForLookup: 1,  
@@ -241,12 +242,15 @@ ACTGeoSDK.shared.startTimeBasedChecks(
       // Handle error  
   }  
 ) 
+```
 
 Stopping Time-Based Checks 
 
 Stop the time based location checks with the stopTimeBasedChecks function: 
 
+```java
 ACTGeoSDK.shared.stopTimeBasedChecks() 
+```
 
 API Reference 
 
