@@ -266,27 +266,26 @@ ACTGeoSDK.shared.stopTimeBasedChecks()
   - `apiKey`: A String representing your API key. 
   - `config`: An instance of ACTSDKModel.Config containing the configuration settings. 
 
-setInitDelegate(_:): Sets the delegate to receive initialisation callbacks. 
-Parameters: 
+- `setInitDelegate(_:): Sets the delegate to receive initialisation callbacks. 
+##### **Parameters:**
 
-delegate: An instance of ACTInitialiseDelegate. 
+- `delegate`: An instance of ACTInitialiseDelegate. 
+- `setCheckDelegate(_:)`: Sets the delegate to receive location check callbacks. 
+##### **Parameters:**
 
-setCheckDelegate(_:): Sets the delegate to receive location check callbacks. 
-Parameters: 
+- `delegate': An instance of ACTCheckDelegate. 
 
-delegate: An instance of ACTCheckDelegate. 
+- `startChecks(delegate:)`: Starts the location checks with an optional account ID and delegate 
+##### **Parameters:**
 
-startChecks(delegate:): Starts the location checks with an optional account ID and delegate 
-Parameters: 
+- `delegate': An optional instance of ACTCheckDelegate. 
 
-delegate: An optional instance of ACTCheckDelegate. 
+- `requestLocationStatus(completion:)`: Requests the current location status. 
+##### **Parameters:**: 
 
-requestLocationStatus(completion:): Requests the current location status. 
-Parameters: 
+- `completion`: A closure that takes a String parameter representing the location status. 
 
-completion: A closure that takes a String parameter representing the location status. 
-
-stopChecks(): Stops the location monitoring. 
+- `stopChecks()`: Stops the location monitoring. 
 
 ### **Protocols**
 
