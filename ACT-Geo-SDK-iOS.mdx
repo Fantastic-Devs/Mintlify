@@ -28,7 +28,7 @@ Obtain the latest version of the **_ACTGeoSDK_** from Fantastic Tech.
  
 In the files where you want to use the SDK, import it as follows: 
 
-```java
+```swift
 import ACTGeoSDK 
 ```
 
@@ -38,7 +38,7 @@ import ACTGeoSDK
 
 To ensure the ACTGeoSDK functions correctly, add location permissions to your app's Info.plist file. Include the following keys with appropriate messages that inform users why location access is necessary: 
 
-```java
+```swift
 <key>NSLocationWhenInUseUsageDescription</key> 
 <string>We require your location to ensure compliance with regulatory requirements.</string> 
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key> 
@@ -49,7 +49,7 @@ To ensure the ACTGeoSDK functions correctly, add location permissions to your ap
 
 Ensure your app requests location permissions when initialising the SDK. Implement the location permission prompt in the app as follows: 
 
-```java
+```swift
 import CoreLocation 
 
 let locationManager = CLLocationManager() 
@@ -65,7 +65,7 @@ Before using the SDK, you need to initialise it with your API key and configurat
 
 Create an instance of the configuration and set the necessary properties: 
 
-```java
+```swift
     let env: ACTSDKModel.Config.Level = .debug //or .production 
     //Debug ENV will ignore simulator errors. 
 
@@ -81,7 +81,7 @@ Create an instance of the configuration and set the necessary properties:
 
 Install the SDK with your API key and the configuration: 
 
-```java
+```swift
 // Set the delegate for initialisation 
     ACTGeoSDK.shared.setInitDelegate(self) 
 
@@ -90,9 +90,9 @@ Install the SDK with your API key and the configuration:
 
 #### **Initialisation Delegate**
 
-Implement the ACTInitialiseDelegate to handle initialisation callbacks: 
+Implement the **_ACTInitialiseDelegate_** to handle initialisation callbacks: 
 
-```java
+```swift
 extension YourViewController: ACTInitialiseDelegate { 
      
     func initialiseCompleted() { 
@@ -124,7 +124,7 @@ Once the SDK is initialised, you can start the location checks by providing an a
 
 Set the delegate to handle location check callbacks: 
 
-```java
+```swift
 ACTGeoSDK.shared.setCheckDelegate(self) 
 ``` 
 
@@ -132,7 +132,7 @@ ACTGeoSDK.shared.setCheckDelegate(self)
 
 Start the location checks with an optional account ID: 
 
-```java
+```swift
 ACTGeoSDK.shared.startChecks(delegate: self) 
 ```
  
@@ -140,7 +140,7 @@ ACTGeoSDK.shared.startChecks(delegate: self)
 
 Implement the ACTCheckDelegate to handle check events: 
 
-```java
+```swift
 extension NetworkManager: ACTCheckDelegate { 
     func checksStarted() { 
         print("Location checks started successfully.") 
@@ -170,7 +170,7 @@ extension NetworkManager: ACTCheckDelegate {
 
 You can request the current location status by calling the requestLocationStatus method. This method will return the result of LocationCheckResult via a completion handler. 
 
-```java
+```swift
 enum ReasonForLookup: Int { 
     case login = 0 
     case validate = 1 
@@ -207,7 +207,7 @@ ACTGeoSDK.shared.requestLocationStatus(accountID, reasonForLookup.rawValue)  { r
 
 To stop the location monitoring, use the stopChecks method. 
 
-```java
+```swift
 ACTGeoSDK.shared.stopChecks() 
 ```
 
@@ -217,7 +217,7 @@ Once the SDK is initialised the developer can set time based checks as well. Thi
 
 To start time-based checks, use the startTimeBasedChecks method: 
 
-```java
+```swift
 ACTGeoSDK.shared.startTimeBasedChecks(  
   interval: 30, // Use predefined interval  
   reasonForLookup: 1,  
@@ -248,7 +248,7 @@ ACTGeoSDK.shared.startTimeBasedChecks(
 
 Stop the time based location checks with the stopTimeBasedChecks function: 
 
-```java
+```swift
 ACTGeoSDK.shared.stopTimeBasedChecks() 
 ```
 
