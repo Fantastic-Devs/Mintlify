@@ -1,296 +1,427 @@
-# ACTGeoSDK Android SDK       
+# **ACT-GEOSAFE - Android SDK**
 
-### Version: 0.1
+## **Overview**
+**ACTGeoSDK** is an Android SDK designed for compliance purposes. This SDK ensures that the end user's location complies with regulatory requirements by performing checks and providing the necessary feedback to your application.
 
-## Overview
+## **Integration**
 
-ACTGeoSDK is an Android SDK designed for compliance purposes. This SDK ensures that the user's location complies with regulatory requirements by performing checks and providing the necessary feedback to your application. 
+### **Manual Integration** 
 
-## Integration 
+#### **1. Download the SDK**
 
-### Manual Integration 
+Obtain the latest version of the **ACTGeoSDK** from Fantastic Tech
 
-1. **Download the SDK**
+#### **2. Add the SDK to Your Project**
 
-Obtain the latest version of the ACTGeoSDK from Fantastic Tech. 
-
-2. **Add the SDK to Your Project** 
-
-- Put the downloaded .aar file into the application module’s lib folder *usually you can find it at app/libs, if it is not exist, create the lib folder within the app folder). 
-
-- Open the application module’s build.gradle file (usually you can find it at app/build.gradle). 
-
-In the depencencies section, add the following line: 
-
-```java
-implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar, "*.aar"))))
+- Save the downloaded .aar file into the application module’s lib folder (usually you can find it at app/libs, if it does not exist, create the lib folder within the app folder). 
+- Open the application module’s build.gradle file (usually you can find it at app/build.gradle).
+- In the dependencies section, add the following line:
+```gradle
+implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar")))) 
 ```
+- As the SDK is included as a .aar file, you need to manually add the used dependencies if they are still not used:
 
-- Also, as the SDK is included as .aar file, you need to manually add the used dependencies if they are still not used: 
-
-```java
-// Android
-implementation(libs.androidx.core.ktx)
-implementation(libs.androidx.appcompat)
-implementation(libs.androidx.arch.coretesting)
-implementation(libs.kotlin.coroutine)
-implementation(libs.kotlin.coroutinetest)
-implementation(libs.material)
-
-// Play Services
-implementation(libs.playservices.core)
-implementation(libs.playservices.location)
-
-// Retrofit
-implementation(libs.retrofit)
-implementation(libs.retrofit.converter.gson)
-implementation(libs.okhttp)
-```
+```gradle
+// Android 
+ implementation(libs.androidx.core.ktx) 
+ implementation(libs.androidx.appcompat) 
+ implementation(libs.androidx.arch.coretesting) 
+ implementation(libs.kotlin.coroutine) 
+ implementation(libs.kotlin.coroutinetest) 
+ implementation(libs.material) 
+  
+// Play Services 
+ implementation(libs.playservices.core) 
+ implementation(libs.playservices.location) 
+  
+// Retrofit 
+ implementation(libs.retrofit) 
+ implementation(libs.retrofit.converter.gson) 
+ implementation(libs.okhttp) 
+ ```
 
 - For testing purposes, you also can add the following dependencies: 
- 
-```java
-// JUnit
-testImplementation(libs.junit)
 
-androidTestImplementation(libs.androidx.espresso.core)
-androidTestImplementation(libs.junit.ext)
-
-// Mockito
-testImplementation(libs.mockito.core)
-testImplementation(libs.mockito.kotlin)
-testImplementation(libs.mockk)
+```gradle
+// JUnit 
+ testImplementation(libs.junit) 
+  
+ androidTestImplementation(libs.androidx.espresso.core) 
+ androidTestImplementation(libs.junit.ext) 
+  
+// Mockito 
+ testImplementation(libs.mockito.core) 
+ testImplementation(libs.mockito.kotlin) 
+ testImplementation(libs.mockk) 
 ```
-
 - Press the Sync Now link at the top or select File/Sync Gradle files menu to ensure that all the gradle dependencies are synced. 
 
-You are ready to use the SDK! 
+ ### **Import the SDK**
 
-### Import the SDK 
+Import the necessary classes into the files where you need to use the SDK.
 
-In the files where you want to use the SDK, import the necessary used classes as you usually do. 
+## **Usage**
 
-## Usage 
+### **1. Configuring SDK**
 
-1. **Initialising the SDK**
+You can configure the SDK in two ways:
 
-Before using the SDK, you need to initialise it with your API key and configuration. 
+#### **Via** AndroidManifest.xml:
 
-**Configuration**
+Add your configuration values to the manifest file (app/src/main/AndroidManifest.xml):
 
-You need to add your configuration values into the manifest file (AndroidManifest.xml) in the application module (usually you can find it at app/src/main/AndroidManifest.xml): 
-
-```java
-<meta-data
-     android:name="com.fantastic.sdk.API_KEY"
-     android:name="Your API_KEY goes here"
-/>
-
-<meta-data
-     android:name="com.fantastic.sdk.BASE_URL"
-     android:name="Your BASE_URL goes here"
-/>
-
-<meta-data
-     android:name="com.fantastic.sdk.ACCOUNT_ID"
-     android:name="Your ACCOUNT_ID goes here"
-/>
+```xml
+<meta-data 
+     android:name="com.fantastic.sdk.API_KEY" 
+     android:value="YOUR_API_KEY_GOES_HERE" 
+ /> 
+  
+<meta-data 
+     android:name="com.fantastic.sdk.BASE_URL" 
+     android:value="YOUR_BASE_URL_GOES_HERE" 
+ /> 
+  
+<meta-data 
+     android:name="com.fantastic.sdk.ACCOUNT_ID" 
+     android:value="YOUR_ACCOUNT_ID_GOES_HERE" 
+ /> 
 ```
 
-Installation 
+#### **Via Code Injection:**
 
-Inject the LocationHandler instance in the constructor of your ViewModel: 
+You can also inject the configuration directly when initializing the **LocationHandler** instance using the **getInstance** methods:
 
-A képen szöveg, Betűtípus, képernyőkép, sor látható
+````kotlin
+ApiKeyHolder.apply {
+    apiKey = "YOUR_API_KEY"
+    baseUrl = "https://api.example.com"
+    accountId = "YOUR_ACCOUNT_ID" // Optional
+    tokenLifespan = 30 // Optional
+}
+val locationHandler = LocationHandler.getInstance(
+    context = applicationContext,
+    apiKeyHolder = ApiKeyHolder
+)
 
-Automatikusan generált leírás 
+````
 
-Then you can initialize using the SDK in your ViewModel and you also can save the status of the initialization: 
+### **2. Create LocationHandler Instance**
 
-A képen szöveg, képernyőkép, Betűtípus látható
+Create the **LocationHandler** instance in your ViewModel or application code based on your configuration approach.
 
-Automatikusan generált leírás 
+- Using **Manifest** Configurations:
 
-2. Starting the Location Checks 
+````kotlin
+private val locationHandler = LocationHandler.getInstance(applicationContext)  
+````
+- Using an **API Key Holder** Object:
 
-Once the SDK is initialised, you can start the location checks by observing the results in the LocationHandler instance. 
+````kotlin
+ApiKeyHolder.apply {
+    apiKey = "YOUR_API_KEY"
+    baseUrl = "https://api.example.com"
+    accountId = "YOUR_ACCOUNT_ID" // Optional
+    tokenLifespan = 30 // Optional
+}
+private val locationHandler = LocationHandler.getInstance(
+    context = applicationContext,
+    apiKeyHolder = ApiKeyHolder
+)
 
-Observe the results 
+````
 
-Start a new coroutine scope where you can collect the emitted results: 
+### **3. Initialise SDK**
 
-A képen szöveg, képernyőkép, Betűtípus látható
+The **initialize** function is used to initialize the SDK and ensure it is ready for use. This function executes asynchronously and notifies the caller when the initialization process is complete. 
 
-Automatikusan generált leírás 
+````kotlin
+fun initialize(callback: (isInitialized: Boolean) -> Unit)
+````
 
-Start Checks 
+##### **Parameters**
 
-Start the location checks: 
+- `callback: (isInitialized: Boolean) -> Unit`: A callback function that is invoked once the initialization process completes.
 
-A képen szöveg, Betűtípus, képernyőkép, tervezés látható
+##### **Usage**
 
-Automatikusan generált leírás 
+Call the **initialize** method at the start of your application or when preparing the SDK for use. Use the callback to check if the SDK was initialized successfully.
 
-Clean up when you finished 
+````kotlin
+locationHandler.initialize { isInitialized ->
+    if (isInitialized) {
+        println("SDK initialized successfully!")
+        // Proceed with using the SDK  
+    } else {
+        println("Failed to initialize the SDK.")
+        // Handle initialization failure  
+    }
+}
 
-Call the LocationHandler’s destroy() method if you finished working with the SDK: 
+````
 
-A képen szöveg, Betűtípus, képernyőkép látható
+### **4. Location Checks**
 
-Automatikusan generált leírás 
+Location checks can be performed through **on-demand checks** or **continuous checks**.
 
-3. Requesting Location Status 
+#### **4.1. On Demand Checks**
 
-You can request the current location status by calling the requestForLocationStatus method on the IO thread. This method will return the result of LocationCheckResult via a returning value, after you might want to go back to the main thread to process the value (or use a MutableStatusFlow). 
+#### **Start Location Checks**
 
-You might expect to get null there as long as there were no emitted LocationCheckResult instance yet, which means that the SDK does not have location information yet, so it cannot get the location status either. 
+Once the SDK is initialised, you can start the location checks by observing the results in the **LocationHandler** instance.
 
-A képen szöveg, képernyőkép, Betűtípus látható
+````kotlin
+fun start()
+````
 
-Automatikusan generált leírás 
+##### **Usage**
 
-4. Stopping the Checks 
+````kotlin
+fun onStartClicked() { 
+     locationHandler.start() 
+ } 
+````
 
-To stop the location monitoring, use the stop method. 
+#### **Observe the results**
 
-A képen szöveg, Betűtípus, képernyőkép, tervezés látható
+Start a new coroutine scope where you can collect the results:
 
-Automatikusan generált leírás 
+````kotlin
+init { 
+     viewModelScope.launch { 
+         locationHandler.result.collect { 
+             // process the result 
+         } 
+     } 
+ } 
+````
 
-API Reference 
+#### **Stop On Demand Checks**
 
-LocationHandler 
+To stop location monitoring, use the **stop** method.
 
-Properties 
+````kotlin
+fun stop()
+````
 
-result: A flow property where you can get the continuous location report. 
+##### **Usage**
+````kotlin
+fun onStopClicked() { 
+     locationHandler.stop() 
+ } 
+````
 
-log: A flow property where you can get the SDK log. 
+#### **Request Location Status**
 
-accuracy: An enum property where you can set the location accuracy / device resource consuming behaviour. 
+You can request the current location status by calling the **requestForLocationStatus** method on the IO thread. This method will return the result of **LocationCheckResult** via a returning value, after you might want to go back to the main thread to process the value (or use a MutableStatusFlow).
 
-distanceInMeter: A Float property where you can set the minimal distance between location alerts. 
+If **requestForLocationStatus** is called too quickly after starting the service, the **LocationCheckResult** instance in the SDK may not have been able to retrieve the devices' location, and it will return null.  If this is the case, after a short period of time (3 seconds) try recalling the **requestForLocationStatus** method, or after the first location fix is received.
 
-updateFRequency: A Long value where you can set the delay between location alerts. 
+````kotlin
+suspend fun requestForLocationStatus(
+    accountId: String,
+    reason: ReasonForLookup
+): LocationCheckResult?
+````
 
-result: A flow property where you can get the continuous location report. 
+##### **Parameters**
 
-Methods 
+- `accountId: String?`: The account identifier for which location checks are being performed.
+- `reason: ReasonForLookup`: An enumerated value or object indicating the reason or purpose for performing the location checks.
 
-initialize(): Initialises the SDK. 
+##### **Return**
 
-Parameters: 
+- Returns a **LocationCheckResult** object containing the location check details. It can be null if no result is available.
 
-callback (isInitialized: Boolean) -> Unit: A callback which reports to the app whether the initialization process finished correctly. 
+##### **Usage**
 
-start(): Starts the location monitoring. 
+````kotlin
+fun onSendRequestClicked() { 
+     scope.launch(Dispatchers.IO) { 
+         val result = locationHandler.requestForLocationStatus( 
+             accountId = accountId, 
+             reason = reasonForLookup 
+         ) 
+         resultFlow.emit(result) 
+     } 
+ } 
+````
 
-stop(): Stops the location monitoring. 
+#### **4.2. Continuous Checks**
 
-destroy(): Clears internal logging and emits a null value as result. 
+#### **Start Continuous Location Checks**
 
-requestForLocationStatus(Requests the current location status. 
+The **startContinuousChecks** function initiates a continuous process to periodically perform location checks. This function allows for callback execution at regular **intervals**, upon completion, or in the event of an error.
 
-Parameters: 
+````kotlin
+fun startContinuousChecks(
+    interval: Long,
+    accountId: String?,
+    reasonForLookup: ReasonForLookup,
+    onInterval: (LocationCheckResult?) -> Unit,
+    onError: (Throwable?) -> Unit
+)
+````
 
-accountId: An accountId you would like to get the location status report with. 
+##### **Parameters**
 
-reason: The reason of getting the location status report. 
+- `interval: Long`: Defines the time interval, in milliseconds, between each periodic location check.
+- `accountId: String?`: The account identifier for which location checks are being performed. This parameter is optional and can be null.
+- `reasonForLookup: ReasonForLookup`: An enumerated value or object indicating the reason or purpose for performing the location checks.
+- `onInterval: (LocationCheckResult?) -> Unit`: A callback function invoked at each interval. It receives a LocationCheckResult object containing the results of the periodic check, or null if unavailable.
+- `onError: (Throwable?) -> Unit`: A callback function triggered in case of an error. It receives a Throwable object containing details of the error, or null if no specific error information is available.
 
- 
+##### **Usage**
 
-Enums 
+````kotlin
+val interval = 5 // Selected interval in Sec
 
-HardwareStatus 
+val intervalInMillis = interval * 1000 // Convert interval to milliseconds
 
-STATUS_INITIALIZING: Indicates an initializing value for this enum. 
+locationHandler.startContinuousChecks(
+    interval = intervalInMillis,
+    accountId = "12345",
+    reasonForLookup = ReasonForLookup.LOGIN,
+    onInterval = { result ->
+        println("Interval Update: $result")
+    },
+    onError = { error ->
+        println("Error Occurred: ${error?.message}")
+    }
+)
+````
 
-STATUS_OK: Indicates that the current device looks acceptable. 
+##### **Behavior**
 
-STATUS_ROOTED_DEVICE: Indicates that the current device looks to be rooted. 
+##### **1. Periodic Execution:**
 
-STATUS_EMULATED_DEVICE: Indicates that the current device looks to be an emulator. 
+- Executes the **onInterval** callback at the specified interval.
 
-STATUS_PERMISSIONS_MISSING: Indicates that the application does not have the proper permissions to operate. In this case, the application needs to request for the fine and/or coarse location permission and call the start() method again. 
+##### **2. Completion:**
 
-STATUS_DEVELOPER_OPTIONS_ENABLED: Indicates that the developer settings are enabled on the current device. 
+- When the specified duration elapses, the function executes the **onComplete** callback with a list of all collected results.
 
-STATUS_PROXY_ENABLED: Indicates that a proxy has been set up on the current network. 
+##### **3. Error Handling:**
 
-STATUS_RESTRICTED_SOFTWARE_FOUND: Indicates that a GPS spoofing application can be found on the current device. 
+- If an error occurs during execution, the **onError** callback is invoked with details of the error.
 
-STATUS_INITIALIZATION_FAILED: Indicates that the initialization call was failed to run. 
+##### **Notes**
 
-LocationStatus 
+- The timer will run indefinitely at the specified **interval**.
+- Proper error handling in the **onError** callback is recommended to handle edge cases or unexpected failures.
 
-STATUS_INITIALIZING: Indicates an initializing value for this enum. 
+#### **Stop Continuous Checks**
 
-STATUS_OK: Indicates that the current location looks inside the area. 
+The **stopContinuousChecks** function is used to stop an ongoing continuous location check initiated by the **startContinuousChecks** function. It ensures that the timer and any associated operations are properly terminated.
 
-STATUS_LOCATION_UNCLEAR: Indicates that the current location has not enough information to be accepted (like the country code is OK but the postal code is missing or vice versa). 
+````kotlin
+fun stopContinuousChecks()
+````
 
-STATUS_LOCATION_NO: Indicates that the current location looks ouside the area. 
+#### **Usage**
 
-STATUS_LOCATION_MOCK: Indicates that the current location comes from a mock provider. 
+````kotlin
+locationHandler.stopContinuousChecks()
+````
 
-STATUS_LOCATION_HARDWARE_INCOMPATIBLE: Indicates that the current device did not meet the necessary criteria in the hardware checking phase. In this case, the location checks aren’t run, and you need to ask the user to fix the issues (marked orange) or change the device as the issues are not fixable (marked red). 
+### **5. Clean up when you finished**
 
-ReasonForLookup 
+Call the LocationHandler’s destroy() method when you have finished working with the SDK. This is good to be done when your ViewModel is also going to be cleared, like in this example:
 
-login: Indicates the reason for the location lookup. 
+````kotlin
+override fun onCleared() { 
+     super.onCleared() 
+     locationHandler.destroy() 
+ } 
+````
 
-validate: Indicates the reason for the location lookup. 
+Doing this prevents accidentally leaking subscribers or emitters in the SDK as the ViewModel’s lifecycle is bound to the Activity’s or Fragment’s lifecycle.
 
-placeBet: Indicates the reason for the location lookup. 
+## **API Reference**
 
-purchase: Indicates the reason for the location lookup. 
+### **LocationHandler**
 
-BoundingBoxCorners 
+#### **Properties**
 
-NorthWest: Indicates the northwest corner of the bounding box. 
+- `result:` A flow property where you can get the continuous location report. 
+- `log:` A flow property where you can get the SDK log. 
+- `result:` A flow property where you can get the continuous location report. 
 
-NorthEast: Indicates the northeast corner of the bounding box. 
+#### **Methods**
 
-SouthWest: Indicates the southwest corner of the bounding box. 
+- `initialize():` Initialises the SDK. 
+- `callback (isInitialized: Boolean) -> Unit:` A callback which reports to the app whether the initialization process finished correctly.
+- `start():` Starts the location monitoring.
+- `startContinuousChecks(
+    interval: Long,
+    accountId: String?,
+    reasonForLookup: ReasonForLookup,
+    onInterval: (LocationCheckResult?) -> Unit,
+    onError: (Throwable?) -> Unit
+):` Start continuous location monitoring
+- `stop():` Stops the location monitoring.
+- `stopContinuousChecks():` Stops continuous location monitoring.
+- `destroy():` Clears internal logging and emits a null value as result.
+- `requestForLocationStatus( 
+      accountId: String,
+      reason: ReasonForLookup):` Requests the current location status. 
 
-SouthEast: Indicates the southeast corner of the bounding box. 
+### **Parameters:**
 
-Accuracy 
+- `accountId: String` An accountId you would like to get the location status report with.
+- `reason: ReasonForLookup` The reason for getting the location status report. 
+- `interval: Long`: Defines the time interval, in milliseconds, between each periodic location check.
+- `accountId: String?`: The account identifier for which location checks are being performed. This parameter is optional and can be null.
+- `reasonForLookup: ReasonForLookup`: An enumerated value or object indicating the reason or purpose for performing the location checks.
+- `onInterval: (LocationCheckResult?) -> Unit`: A callback function invoked at each interval. It receives a LocationCheckResult object containing the results of the periodic check, or null if unavailable.
+- `onError: (Throwable?) -> Unit`: A callback function triggered in case of an error. It receives a Throwable object containing details of the error, or null if no specific error information is available.
 
-PRIORITY_BALANCED_POWER_ACCURACY: Requests a tradeoff that is balanced between location accuracy and power usage. 
+### **Enums**
 
-PRIORITY_LOW_POWER: Requests a tradeoff that favors low power usage at the possible expense of location accuracy. 
+#### **HardwareStatus**
 
-PRIORITY_HIGH_ACCURACY: Requests a tradeoff that favors highly accurate locations at the possible expense of additional power usage. 
+- `STATUS_INITIALIZING:` Indicates an initializing value for this enum.
+- `STATUS_OK:` Indicates that the current device looks acceptable.
+- `STATUS_ROOTED_DEVICE:` Indicates that the current device looks to be rooted.
+- `STATUS_EMULATED_DEVICE:` Indicates that the current device looks to be an emulator.
+- `STATUS_PERMISSIONS_MISSING:` Indicates that the application does not have the proper permissions to operate. In this case, the application needs to request for the fine and/or coarse location permission and call the start() method again.
+- `STATUS_DEVELOPER_OPTIONS_ENABLED:` Indicates that the developer settings are enabled on the current device.
+- `STATUS_PROXY_ENABLED:` Indicates that a proxy has been set up on the current network.
+- `STATUS_RESTRICTED_SOFTWARE_FOUND:` Indicates that a GPS spoofing application can be found on the current device.
+- `STATUS_INITIALIZATION_FAILED:` Indicates that the initialization call failed to run. 
 
-PRIORITY_PASSIVE: Ensures that no extra power will be used to derive locations. This enforces that the request will act as a passive listener that will only receive "free" locations calculated on behalf of other clients, and no locations will be calculated on behalf of only this request. 
 
- 
+#### **LocationStatus**
 
-Entities 
+- `STATUS_INITIALIZING:` Indicates an initializing value for this enum.
+- `STATUS_OK:` Indicates that the current location looks inside the area.
+- `STATUS_LOCATION_UNCLEAR:` Indicates that the current location does not have enough information to be accepted.
+- `STATUS_LOCATION_NO:` Indicates that the current location looks outside the area.
+- `STATUS_LOCATION_MOCK:` Indicates that the current location comes from a mock provider.
+- `STATUS_LOCATION_HARDWARE_INCOMPATIBLE:` Indicates that the current device did not meet the necessary criteria in the hardware checking phase. In this case, the location checks aren’t run, and you need to ask the user to fix the issues (marked orange) or change the device as the issues are not fixable (marked red).
 
-AddressResult 
+#### **ReasonForLookup**
 
-Properties 
+- `login:` Indicates the reason for the location lookup.
+- `validate:` Indicates the reason for the location lookup.
+- `placeBet:` Indicates the reason for the location lookup.
+- `purchase:` Indicates the reason for the location lookup. 
 
-address: An optional Address value where you can get the geocoded address for a location. 
+### **Entities**
 
-isValid: Indicates whether the given address is meet with the given criteria in the location check phase. 
+#### **AddressResult**
 
-LocationCheckResult 
+##### **Properties**
 
-Properties 
+- `address:` An optional Address value where you can get the geocoded address for a location.
+- `isValid:` Indicates whether the given address meets with the given criteria in the location check phase. 
 
-location: A Location property where you can get the current location fix. 
+#### **LocationCheckResult**
 
-boundingBoxResults: A map property where you can get the validity information about the bounding box corners. The hardware statuses will be the same as in this entity, but you can expect different locationStatus and/pr addressResult value. 
+##### **Properties**
 
-addressResult: An AddressResult property where you can get the validity information about the current location. 
-
-hardwareStatus: An enum property where you can get any value of HardwareStatus enum. 
-
-locationStatus: An enum property where you can get any value of LocationStatus enum. 
-
-reasonForFailure: An enum property where you can get the error reported by backend service (usually during the location report call). 
-
-exception: A Throwable property where you can have any internally caught exception. 
+- `location:` A Location property where you can get the current location.
+- `addressResult:` An AddressResult property where you can get the validity information about the current location.
+- `hardwareStatus:` An enum property where you can get any value of HardwareStatus enum.
+- `locationStatus:` An enum property where you can get any value of LocationStatus enum.
+- `reasonForFailure:` An enum property where you can get the error reported by backend service (usually during the location report call).
+- `exception:` A Throwable property where you can have any internally caught exception.
