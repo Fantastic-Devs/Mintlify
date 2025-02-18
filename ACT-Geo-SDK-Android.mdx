@@ -66,23 +66,36 @@ testImplementation(libs.mockk)
 
 You are ready to use the SDK! 
 
-Import the SDK 
+### Import the SDK 
 
 In the files where you want to use the SDK, import the necessary used classes as you usually do. 
 
-Usage 
+## Usage 
 
-1. Initialising the SDK 
+1. **Initialising the SDK**
 
 Before using the SDK, you need to initialise it with your API key and configuration. 
 
-Configuration 
+**Configuration**
 
 You need to add your configuration values into the manifest file (AndroidManifest.xml) in the application module (usually you can find it at app/src/main/AndroidManifest.xml): 
 
-A képen szöveg, képernyőkép, Betűtípus látható
+```java
+<meta-data
+     android:name="com.fantastic.sdk.API_KEY"
+     android:name="Your API_KEY goes here"
+/>
 
-Automatikusan generált leírás 
+<meta-data
+     android:name="com.fantastic.sdk.BASE_URL"
+     android:name="Your BASE_URL goes here"
+/>
+
+<meta-data
+     android:name="com.fantastic.sdk.ACCOUNT_ID"
+     android:name="Your ACCOUNT_ID goes here"
+/>
+```
 
 Installation 
 
