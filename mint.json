@@ -33,6 +33,11 @@
   ],
   "anchors": [
     {
+      "name": "Console User Guide",
+      "icon": "book-open-cover",
+      "url": "https://fantastictech.mintlify.app/consoleuserguide#overview"
+    },
+    {
       "name": "Documentation",
       "icon": "book-open-cover",
       "url": "https://mintlify.com/docs"
