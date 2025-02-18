@@ -295,24 +295,28 @@ stopChecks(): Stops the location monitoring.
 
 #### **ACTInitialiseDelegate**
 
-initialiseCompleted(): Called when the SDK is initialised successfully. 
+- `initialiseCompleted()`: Called when the SDK is initialised successfully. 
 
-initialiseFailed(error:): Called when the SDK initialisation fails. 
-Parameters: 
+- `initialiseFailed(error:)`: Called when the SDK initialisation fails. 
 
-error: An instance of ACTSDKModel.InitError representing the error that occurred. 
+##### **Parameters:**
+
+- `error`: An instance of ACTSDKModel.InitError representing the error that occurred. 
 
 #### **ACTCheckDelegate**
 
-checksStarted(): Called when the location checks start successfully. 
+- `checksStarted()': Called when the location checks start successfully. 
 
-checkStartFailed(error:): Called when the location checks fail to start. 
-Parameters: 
+- `checkStartFailed(error:)`: Called when the location checks fail to start. 
 
-error: An instance of ACTSDKModel.StartError representing the error that occurred. 
+##### **Parameters:**
 
-locationStatusChanged(): Called when there is a change in the device location status. 
-Parameters: none 
+- `error`: An instance of ACTSDKModel.StartError representing the error that occurred. 
+
+- `locationStatusChanged()`: Called when there is a change in the device location status. 
+
+##### **Parameters:**
+-none 
 
 ### **Enums**
 
