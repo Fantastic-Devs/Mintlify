@@ -41,8 +41,6 @@ To ensure the ACTGeoSDK functions correctly, add location permissions to your ap
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key> 
 <string>Your location helps us to verify compliance status.</string> 
 
- 
-
 Requesting Location Permissions 
 
 Ensure your app requests location permissions when initialising the SDK. Implement the location permission prompt in the app as follows: 
@@ -52,8 +50,6 @@ import CoreLocation
 let locationManager = CLLocationManager() 
 locationManager.requestWhenInUseAuthorization() 
 // or locationManager.requestAlwaysAuthorization() if needed 
-
- 
 
 1. Initialising the SDK 
 
