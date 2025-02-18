@@ -1,1 +1,37 @@
 # **ACT GEOSAFE - iOS SDK** 
+
+Document Version: 0.1.15 
+
+SDK Version: 1.1 
+
+Supports iOS Version: 13+ 
+
+## **Overview** 
+
+**ACTGeoSDK** is an iOS SDK designed for compliance purposes. This SDK ensures that the user's location complies with regulatory requirements by performing checks and providing the necessary feedback to your application. 
+
+## **Integration** 
+
+### **Manual Integration**
+
+#### **Download the SDK**
+ 
+Obtain the latest version of the ACTGeoSDK from Fantastic Tech. 
+
+#### **Add the SDK to Your Project** 
+
+- Drag and drop the ACTGeoSDK.framework file into your Xcode project. 
+- Ensure that the framework is added to the "Embedded Binaries" and "Link Binary With Libraries" sections in your project settings. 
+- Verify that ACTGeoSDK.framework appears in the "Frameworks, Libraries, and Embedded Content" section with "Embed & Sign" selected. 
+
+### **Import the SDK**
+ 
+In the files where you want to use the SDK, import it as follows: 
+
+import ACTGeoSDK 
+
+## **Usage** 
+
+Adding Location Permissions to the App's Info.plist 
+
+To ensure the ACTGeoSDK functions correctly, add location permissions to your app's Info.plist file. Include the following keys with appropriate messages that inform users why location access is necessary: 
