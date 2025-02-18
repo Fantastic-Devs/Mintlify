@@ -120,7 +120,7 @@ extension YourViewController: ACTInitialiseDelegate {
 
 Once the SDK is initialised, you can start the location checks by providing an account ID and setting the check delegate. 
 
-Set the Check Delegate 
+#### **Set the Check Delegate**
 
 Set the delegate to handle location check callbacks: 
 
@@ -128,7 +128,7 @@ Set the delegate to handle location check callbacks:
 ACTGeoSDK.shared.setCheckDelegate(self) 
 ``` 
 
-Start Checks 
+#### **Start Checks** 
 
 Start the location checks with an optional account ID: 
 
@@ -136,7 +136,7 @@ Start the location checks with an optional account ID:
 ACTGeoSDK.shared.startChecks(delegate: self) 
 ```
  
-Check Delegate 
+#### **Check Delegate**
 
 Implement the ACTCheckDelegate to handle check events: 
 
