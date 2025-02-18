@@ -33,6 +33,11 @@
   ],
   "anchors": [
     {
+      "name": "ACT Geosafe SDK - iOS",
+      "icon": "book-open-cover",
+      "url": "https://fantastictech.mintlify.app/ACT-Geo-SDK-iOS"
+    },
+    {
       "name": "ACT Geosafe SDK - Android",
       "icon": "book-open-cover",
       "url": "https://fantastictech.mintlify.app/ACT-Geo-SDK-Android"
