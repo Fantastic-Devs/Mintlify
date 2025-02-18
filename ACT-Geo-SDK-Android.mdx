@@ -22,7 +22,9 @@ Obtain the latest version of the ACTGeoSDK from Fantastic Tech.
 
 In the depencencies section, add the following line: 
 
-`implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar, "*.aar"))))`
+```java
+implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar, "*.aar"))))
+```
 
 - Also, as the SDK is included as .aar file, you need to manually add the used dependencies if they are still not used: 
 
