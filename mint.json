@@ -33,6 +33,16 @@
   ],
   "anchors": [
     {
+      "name": "ACT Geosafe SDK - iOS",
+      "icon": "book-open-cover",
+      "url": "https://integration.advancedcompliance.tech/ACT-Geo-SDK-iOS"
+    },
+    {
+      "name": "ACT Geosafe SDK - Android",
+      "icon": "book-open-cover",
+      "url": "https://integration.advancedcompliance.tech/ACT-Geo-SDK-Android"
+    },
+    {
       "name": "Console User Guidee",
       "icon": "book-open-cover",
       "url": "https://fantastictech.mintlify.app/consoleuserguide"
