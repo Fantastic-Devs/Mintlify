@@ -72,6 +72,15 @@
         "development"
       ]
     },
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
+    },
     {
       "group": "Essentials",
       "pages": [
