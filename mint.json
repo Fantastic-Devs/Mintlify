@@ -2,14 +2,14 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Starter Kit",
   "logo": {
-    "dark": "/logo/ACT_logo_light.png",
-    "light": "/logo/ACT_logo_dark.png"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#A30A54",
-    "light": "#EA4293",
-    "dark": "#A30A54",
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@advancedcompliance.tech"
+      "url": "mailto:hi@mintlify.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://integration.advancedcompliance.tech"
+    "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
     {
@@ -33,19 +33,9 @@
   ],
   "anchors": [
     {
-      "name": "ACT Geosafe SDK - iOSs",
-      "icon": "book-open-cover",
-      "url": "https://integration.advancedcompliance.tech/ACT-Geo-SDK-iOS"
-    },
-    {
-      "name": "ACT Geosafe SDK - Android",
-      "icon": "book-open-cover",
-      "url": "https://integration.advancedcompliance.tech/ACT-Geo-SDK-Android"
-    },
-    {
       "name": "Console User Guide",
       "icon": "book-open-cover",
-      "url": "https://integration.advancedcompliance.tech/consoleuserguide"
+      "url": "https://fantastictech.mintlify.app/consoleuserguide"
     },
     {
       "name": "Documentation",
@@ -65,12 +55,11 @@
   ],
   "navigation": [
     {
-      "group": "Get Startedd",
+      "group": "Get Started",
       "pages": [
         "introduction",
         "quickstart",
-        "development",
-        "geosafe"
+        "development"
       ]
     },
     {
