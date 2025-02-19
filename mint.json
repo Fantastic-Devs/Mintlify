@@ -62,7 +62,8 @@
       "group": "ACT Geosafe",
       "pages": [
         "geosafe/SDK-iOS",
-        "geosafe/SDK-Android"
+        "geosafe/SDK-Android",
+        "geosafe/SDK-Web"
       ]
     },
     {
