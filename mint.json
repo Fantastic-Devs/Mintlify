@@ -61,8 +61,8 @@
     {
       "group": "ACT Geosafe",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
+        "geosafe/SDK-iOS",
+        "geosafe/SDK-Android",
         "essentials/images",
         "essentials/settings",
         "essentials/navigation",
