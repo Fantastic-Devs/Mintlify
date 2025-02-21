@@ -33,29 +33,29 @@ icon: 'hat-wizard'
 
 <table border="0">
   <tr>
-    <td>
+    <td valign="top">
       URL:
     </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
+    <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign="top">
       {base_URL}/GetFormUrl
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       URL Parameters:
     </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
+    <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign="top">
       formName, referenceId, webHook
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Method:
     </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
+    <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign="top">
       GET
     </td>
   </tr>
@@ -71,24 +71,24 @@ curl https:{base_url}/GetFormUrl?formName=Form1&referenceId=Test&webHook={url}s 
 
 <table border="0">
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       formName
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (36)_<br />The name of the form to be retrieved.
     </td>
   </tr>
@@ -96,21 +96,21 @@ curl https:{base_url}/GetFormUrl?formName=Form1&referenceId=Test&webHook={url}s 
     <td valign="top">
       referenceId
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (50)_<br />Custom identifier of the applicant, which is intended for binding the applicant in the customer and ACT systems. 
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       webHook
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (2048)_<br />The customer webHook URL, where verification changes will be posted.
     </td>
   </tr>
@@ -124,24 +124,24 @@ If Response status 200: FormObject
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       message
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string Required_<br />Form URL. 
     </td>
   </tr>
@@ -238,35 +238,35 @@ WKWebViewConfiguration is only used when a web view is first initialized. You ca
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       URL:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       {callback_url}
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Content-Type:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       application/json
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Method:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       POST
     </td>
   </tr>
@@ -276,57 +276,57 @@ KYC server will send callback request to customer server, once verification stat
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       StatusType
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string Required_<br />VERIFICATION_STATUS_CHANGED - type of callback 
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       FormId
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (36) Required_<br />Form id. 
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       VerificationId
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (36) Required_<br />The verification’s unique identificator.
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Status
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (9) Required_<br />Status of verification. Possible values:<br />
 
       **unused** - the applicant has not yet filled out a form<br />
@@ -342,35 +342,35 @@ KYC server will send callback request to customer server, once verification stat
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       URL:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       {webHook_url}
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Content-Type:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       application/json
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Method:
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       POST
     </td>
   </tr>
@@ -380,58 +380,58 @@ KYC server will send verification result request to customer server based on web
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       StatusType
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string Required_<br />Type of callback. Possible types:<br />
       VERIFICATION_COMPLETED - the type of callback that notifies about the end of verification.  
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       FormId
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (36) Required_<br />Form id. 
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       VerificationId
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (36) Required_<br />The verification’s unique identificator.
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Status
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (9) Required_<br />Status of verification. Possible values:<br />
       **unused** - the applicant has not yet filled out a form<br />
       **pending** - verification of the applicant in progress<br />
@@ -439,26 +439,26 @@ KYC server will send verification result request to customer server based on web
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Verified
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _boolean Required_<br />Result of verification. Possible values:<br />
       **true** - the applicant passed verification<br />
       **false** - the applicant failed verification
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       Verifications 
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _Verifications List Required<br />
       Verifications List object  
     </td>
@@ -469,24 +469,24 @@ KYC server will send verification result request to customer server based on web
 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       profile | document | facial | address | aml | financial | payment_method | tax_id | database_screening | company
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _VerificationResult_ Required <br />
       VerificationResult object  
     </td>
@@ -497,37 +497,37 @@ KYC server will send verification result request to customer server based on web
 ### VerificationResult 
 <table>
   <tr>
-    <td>
+    <td valign="top">
       **Parameter**
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       **Description**
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       verified
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _boolean Required_<br />Result of particular verification. Possible values: <br />
       **true** - the verification passed <br />
       **false** - the verification failed   
     </td>
   </tr>
   <tr>
-    <td>
+    <td valign="top">
       comment
     </td>
-    <td>
+    <td valign="top">
       &nbsp;&nbsp;&nbsp;&nbsp;
     </td>
-    <td>
+    <td valign="top">
       _string (255)_<br />
       Accompanying verification comment. May not always be provided.    
     </td>
