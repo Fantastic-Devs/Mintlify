@@ -52,19 +52,16 @@
       "group": "ACT Geosafe",
       "pages": [
         "geosafe/SDK-iOS",
-        "geosafe/SDK-Android"
+        "geosafe/SDK-Android",
+        "geosafe/SDK-Web",
+        "geosafe/troubleshooting"
       ]
     },
     {
-      "group": "ACT Verify",
+      "group": "ACT Verify KYC",
       "pages": [
-        "geosafe/SDK-Web"
-      ]
-    },
-    {
-      "group": "ACT KYC",
-      "pages": [
-        "verify/integration"
+        "verify/integration",
+        "verify/troubleshooting"
       ]
     },
     {
