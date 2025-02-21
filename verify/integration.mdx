@@ -4,7 +4,7 @@ description: 'The integration document for ACT Verify'
 icon: 'hat-wizard'
 ---
 
-Forms Integration 
+## Forms Integration 
 
 1. Customer will have a form created with appropriate configurations in his account. 
 
@@ -29,141 +29,173 @@ Forms Integration
   </Card>
 </CardGroup>
 
-Request 
+### Request 
 
-URL: {base_URL}/GetFormUrl 
+<table>
+<tr>
+<td>URL:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>{base_URL}/GetFormUrl
+</td>
+</tr>
+<tr>
+<td>URL Parameters:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>formName, referenceId, webHook
+</td>
+</tr>
+<tr>
+<td>Method:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>GET
+</td>
+</tr>
+</table>
 
-URL Parameters: formName, referenceId, webHook 
-
-Method: GET 
-
-Request Example 
+#### Request Example 
 
 ```curl
 curl https:{base_url}/GetFormUrl?formName=Form1&referenceId=Test&webHook={url}s \ 
     -H 'Api-Key: {API_TOKEN}' \ 
     -X GET 
 ```
- 
 
-Parameter 
+<table>
+<tr>
+<td>Parameter
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>Description
+</td>
+</tr>
+<tr>
+<td>formName
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_string (36)_<br />The name of the form to be retrieved.
+</td>
+</tr>
+<tr>
+<td>referenceId
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_string (50) _<br />Custom identifier of the applicant, which is intended for binding the applicant in the customer and ACT systems. 
+</td>
+</tr>
+<tr>
+<td>webHook
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_string (2048)_<br />The customer webHook URL, where verification changes will be posted.
+</td>
+</tr>
+</table>
 
-Description 
-
-formName 
-
-string (36) 
-
-The name of the form to be retrieved. 
-
-referenceId 
-
-string (50) 
-
-Custom identifier of the applicant, which is intended for binding the applicant in the customer and ACT systems. 
-
-webHook 
-
-string (2048) 
-
-The customer webHook URL, where verification changes will be posted. 
-
-Response 
+### Response 
 
 If Response status 200: FormObject 
 
-FormObject 
+## FormObject 
 
-Parameter 
+<table>
+<tr>
+<td>Parameter
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>Description
+</td>
+</tr>
+<tr>
+<td>message
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_string Required_<br />Form URL. 
+</td>
+</tr>
 
-Description 
-
-message 
-
-string Required 
-
-Form URL. 
+#### Response structure 
 
  
-
-Response structure 
-
- 
-
+```json
     { 
         "message": "<form_url>" 
     } 
-
+```
  
 
-Form language 
+#### Form language 
 
 For the setup of the initial language of form UI, you need to add URL parameter lang. 
 
- 
-
 Possible values: 
 
-az (Azerbaijani) 
+- az (Azerbaijani) 
 
-bn (Bengali) 
+- bn (Bengali) 
 
-de (German) 
+- de (German) 
 
-en (English) 
+- en (English) 
 
-es (Spanish) 
+- es (Spanish) 
 
-es-mx (Spanish(Mexico)) 
+- es-mx (Spanish(Mexico)) 
 
-fr (French) 
+- fr (French) 
 
-he (Hebrew) 
+- he (Hebrew) 
 
-hi (Hindi) 
+- hi (Hindi) 
 
-kk (Kazakh) 
+- kk (Kazakh) 
 
-nl (Dutch) 
+- nl (Dutch) 
 
-pl (Polish) 
+- pl (Polish) 
 
-pt (Portuguese) 
+- pt (Portuguese) 
 
-ro (Romanian) 
+- ro (Romanian) 
 
-ru (Russian) 
+- ru (Russian) 
 
-tr (Turkish) 
+- tr (Turkish) 
 
-uk (Ukrainian) 
+- uk (Ukrainian) 
 
-uz (Uzbek) 
+- uz (Uzbek) 
 
-yi (Yiddish) 
+- yi (Yiddish) 
 
-zh (Chinese) 
-
- 
+- zh (Chinese) 
 
 Example: https://forms.act-tech.com/65e5b4121d92424b9e3af5e443cca0d3b024/?lang=uk 
 
-If the form URL opens in an iframe 
+#### If the form URL opens in an iframe 
 
 For the correct operation of the camera in the iframe, you need to add the attribute allow="microphone *;camera *;midi *;encrypted-media *;clipboard-read;clipboard-write;" to iframe. 
 
- 
-
 The iframe size should not exceed screen size on mobile devices. 
 
-postMessage communication for iframe solution 
+**postMessage** communication for **iframe solution** 
 
 A form triggers a cross-origin message when the applicant completed the form, only when a form was opened in an iframe. 
 
- 
-
 Message format: 
 
+```json
 { 
 
     "event": "FORM_COMPLETED", 
@@ -173,18 +205,13 @@ Message format:
     "verification_id": "{verification_id}" 
 
 } 
+```
 
-If the form URL opens in iOS WKWebView 
+If the form URL opens in iOS **WKWebView** 
 
 For the correct operation of the camera in the WKWebView, you need to setup allowsInlineMediaPlayback = true. 
 
- 
-
 WKWebViewConfiguration is only used when a web view is first initialized. You cannot use this class to change the web view's configuration after it has been created. 
-
- 
-
- 
 
 VERIFICATION_STATUS_CHANGED 
 
