@@ -22,9 +22,46 @@ icon: 'hat-wizard'
 
 <CardGroup cols={1}>
   <Card
-    title="Notes"
+    title="Note"
     icon="bell"
   >
     Verification takes from 2 minutes to 6 hours 
   </Card>
 </CardGroup>
+
+### Request 
+
+<table>
+<tr>
+<td>URL:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>{base_URL}/GetFormUrl
+</td>
+</tr>
+<tr>
+<td>URL Parameters:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>formName, referenceId, webHook
+</td>
+</tr>
+<tr>
+<td>Method:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>GET
+</td>
+</tr>
+</table>
+
+#### Request Example 
+
+```curl
+curl https:{base_url}/GetFormUrl?formName=Form1&referenceId=Test&webHook={url}s \ 
+    -H 'Api-Key: {API_TOKEN}' \ 
+    -X GET 
+```
