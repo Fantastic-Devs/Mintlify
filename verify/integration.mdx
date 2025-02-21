@@ -325,7 +325,7 @@ completed - verification is completed
 
 KYC server will send verification result request to customer server based on webHook_url parameter that was set in Form URL, once verification will be completed. Verify callback will be in the JSON format and they will contain the following format: 
 
-table>
+<table>
 <tr>
 <td>Parameter
 </td>
@@ -396,36 +396,61 @@ Verifications List object
 
 ### VerificationsList 
 
+<table>
+<tr>
+<td>Parameter
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>Description
+</td>
+</tr>
+<tr>
+<td>profile | document | facial | address | aml | financial | payment_method | tax_id | database_screening | company
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_VerificationResult_ Required <br />
+
+VerificationResult object  
+</td>
+</tr>
+</table>
 Parameter 
 
 Description 
 
 profile | document | facial | address | aml | financial | payment_method | tax_id | database_screening | company 
 
-VerificationResult Required 
-
-VerificationResult object 
-
-VerificationResult 
-
-Parameter 
-
-Description 
-
-verified 
-
-boolean Required 
-
-Result of particular verification. Possible values: 
-
-true - the verification passed 
-
-false - the verification failed 
-
-comment 
-
-string (255) 
-
-Accompanying verification comment. May not always be provided. 
-
  
+
+### VerificationResult 
+<table>
+<tr>
+<td>Parameter
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>Description
+</td>
+</tr>
+<tr>
+<td>verified
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_boolean Required_<br />Result of particular verification. Possible values: <br />
+true - the verification passed <br />
+false - the verification failed   
+</td>
+</tr>
+<tr>
+<td>comment
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>_string (255)_<br />
+Accompanying verification comment. May not always be provided.    
+</td>
+</tr>
+</table>
