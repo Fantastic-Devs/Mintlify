@@ -52,7 +52,12 @@
       "group": "ACT Geosafe",
       "pages": [
         "geosafe/SDK-iOS",
-        "geosafe/SDK-Android",
+        "geosafe/SDK-Android"
+      ]
+    },
+    {
+      "group": "ACT Verify",
+      "pages": [
         "geosafe/SDK-Web"
       ]
     },
