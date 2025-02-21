@@ -64,7 +64,7 @@
     {
       "group": "ACT KYC",
       "pages": [
-        "verify/verify"
+        "verify/integration"
       ]
     },
     {
