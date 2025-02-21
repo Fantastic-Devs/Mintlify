@@ -3,3 +3,337 @@ title: 'ACT Verify KYC Integration '
 description: 'The integration document for ACT Verify'
 icon: 'hat-wizard'
 ---
+
+Forms Integration 
+
+1. Customer will have a form created with appropriate configurations in his account. 
+
+2. The customer server sends a request for Get form URL. 
+
+3. The customer server receives a response of Get form URL request. 
+
+4. The applicant opens ACT form by URL that was received in response. 
+
+5. The applicant fills the form and submits data to the ACT server. 
+
+6. The ACT form receives response and shows a success message to the applicant. Also there is a possibility to redirect the applicant to the customer page. 
+
+7. Within 2 minutes to 6 hours, ACT server sends the verification webHook to the customer's server. 
+
+Notes 
+
+Verification takes from 2 minutes to 6 hours 
+
+Request 
+
+URL: {base_URL}/GetFormUrl 
+
+URL Parameters: formName, referenceId, webHook 
+
+Method: GET 
+
+Request Example 
+
+curl https:{base_url}/GetFormUrl?formName=Form1&referenceId=Test&webHook={url}s \ 
+    -H 'Api-Key: {API_TOKEN}' \ 
+    -X GET 
+
+ 
+
+Parameter 
+
+Description 
+
+formName 
+
+string (36) 
+
+The name of the form to be retrieved. 
+
+referenceId 
+
+string (50) 
+
+Custom identifier of the applicant, which is intended for binding the applicant in the customer and ACT systems. 
+
+webHook 
+
+string (2048) 
+
+The customer webHook URL, where verification changes will be posted. 
+
+Response 
+
+If Response status 200: FormObject 
+
+FormObject 
+
+Parameter 
+
+Description 
+
+message 
+
+string Required 
+
+Form URL. 
+
+ 
+
+Response structure 
+
+ 
+
+    { 
+        "message": "<form_url>" 
+    } 
+
+ 
+
+Form language 
+
+For the setup of the initial language of form UI, you need to add URL parameter lang. 
+
+ 
+
+Possible values: 
+
+az (Azerbaijani) 
+
+bn (Bengali) 
+
+de (German) 
+
+en (English) 
+
+es (Spanish) 
+
+es-mx (Spanish(Mexico)) 
+
+fr (French) 
+
+he (Hebrew) 
+
+hi (Hindi) 
+
+kk (Kazakh) 
+
+nl (Dutch) 
+
+pl (Polish) 
+
+pt (Portuguese) 
+
+ro (Romanian) 
+
+ru (Russian) 
+
+tr (Turkish) 
+
+uk (Ukrainian) 
+
+uz (Uzbek) 
+
+yi (Yiddish) 
+
+zh (Chinese) 
+
+ 
+
+Example: https://forms.act-tech.com/65e5b4121d92424b9e3af5e443cca0d3b024/?lang=uk 
+
+If the form URL opens in an iframe 
+
+For the correct operation of the camera in the iframe, you need to add the attribute allow="microphone *;camera *;midi *;encrypted-media *;clipboard-read;clipboard-write;" to iframe. 
+
+ 
+
+The iframe size should not exceed screen size on mobile devices. 
+
+postMessage communication for iframe solution 
+
+A form triggers a cross-origin message when the applicant completed the form, only when a form was opened in an iframe. 
+
+ 
+
+Message format: 
+
+{ 
+
+    "event": "FORM_COMPLETED", 
+
+    "applicant_id": "{applicant_id}", 
+
+    "verification_id": "{verification_id}" 
+
+} 
+
+If the form URL opens in iOS WKWebView 
+
+For the correct operation of the camera in the WKWebView, you need to setup allowsInlineMediaPlayback = true. 
+
+ 
+
+WKWebViewConfiguration is only used when a web view is first initialized. You cannot use this class to change the web view's configuration after it has been created. 
+
+ 
+
+ 
+
+VERIFICATION_STATUS_CHANGED 
+
+ 
+
+URL: <callback_url> 
+
+Method: POST 
+
+Content-Type: application/json 
+
+ 
+
+KYC server will send callback request to customer server, once verification status will be changed. Verify callback will be in the JSON format and they will contain the following object parameters: 
+
+ 
+
+Parameter 
+
+Description 
+
+StatusType 
+
+string Required 
+
+VERIFICATION_STATUS_CHANGED - type of callback 
+
+FormId 
+
+string (36) Required 
+
+Form id. 
+
+VerificationId 
+
+string (36) Required 
+
+The verification’s unique identificator. 
+
+Status 
+
+string (9) Required 
+
+Status of verification. Possible values: 
+
+unused - the applicant has not yet filled out a form 
+
+pending - verification of the applicant in progress 
+
+completed - verification is completed 
+
+ 
+
+VERIFICATION_COMPLETED 
+
+URL: <webHook_url> 
+
+Method: POST 
+
+Content-Type: application/json 
+
+ 
+
+KYC server will send verification result request to customer server based on webHook_url parameter that was set in Form URL, once verification will be completed. Verify callback will be in the JSON format and they will contain the following format: 
+
+ 
+
+ 
+
+ 
+
+Parameter 
+
+Description 
+
+StatusType 
+
+string Required 
+
+Type of callback. Possible types: 
+
+VERIFICATION_COMPLETED - the type of callback that notifies about the end of verification. 
+
+FormId 
+
+string (36) Required 
+
+Form id. 
+
+VerificationId 
+
+string (36) Required 
+
+The verification’s unique identification. 
+
+Status 
+
+string (9) Required 
+
+Status of verification. Possible values: 
+
+unused - the applicant has not yet filled out a form 
+
+pending - verification of the applicant in progress 
+
+completed - verification is completed 
+
+Verified 
+
+boolean Required 
+
+Result of verification. Possible values: 
+
+true - the applicant passed verification 
+
+false - the applicant failed verification 
+
+Verifications 
+
+Verifications List Required 
+
+Verifications List object 
+
+VerificationsList 
+
+Parameter 
+
+Description 
+
+profile | document | facial | address | aml | financial | payment_method | tax_id | database_screening | company 
+
+VerificationResult Required 
+
+VerificationResult object 
+
+VerificationResult 
+
+Parameter 
+
+Description 
+
+verified 
+
+boolean Required 
+
+Result of particular verification. Possible values: 
+
+true - the verification passed 
+
+false - the verification failed 
+
+comment 
+
+string (255) 
+
+Accompanying verification comment. May not always be provided. 
+
+ 
