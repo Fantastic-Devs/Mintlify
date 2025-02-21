@@ -3,3 +3,19 @@ title: 'ACT Verify KYC Integration '
 description: 'The integration document for ACT Verify'
 icon: 'hat-wizard'
 ---
+
+## Forms Integration 
+
+1. Customer will have a form created with appropriate configurations in his account. 
+
+2. The customer server sends a request for Get form URL. 
+
+3. The customer server receives a response of Get form URL request. 
+
+4. The applicant opens ACT form by URL that was received in response. 
+
+5. The applicant fills the form and submits data to the ACT server. 
+
+6. The ACT form receives response and shows a success message to the applicant. Also there is a possibility to redirect the applicant to the customer page. 
+
+7. Within 2 minutes to 6 hours, ACT server sends the verification webHook to the customer's server. 
