@@ -14,13 +14,15 @@ Unlock seamless onboarding with our KYC verification software! Streamline custom
 
 Trust **_Act ID_** for top-tier Identity Verification Services. Streamline authentication, ensure compliance, and foster secure interactions in your business landscape. 
 
-```mermaid
-graph TD;
-    'UserID: ACT12345678'-->'Document Verification';
-    'Document Verification'-->'Liveness Check';
-    'Liveness Check'-->'AML Screening';
-    'AML Screening'-->'Approved';
-    'AML Screening'-->'Declined';
+```flow
+    uid=>Operation: UserID: ACT12345678;
+    doc=>Operation: Documentation;
+    liv=>Operation: Liveness Check;
+    aml=>Operation: AML Screening;
+    yip=>Operation: Approved;
+    nop=>Operation: Declined;
+    uid>doc>liv>aml>yip
+    aml>nop
 ```
 
 <img
