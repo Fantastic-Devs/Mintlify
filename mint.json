@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Starter Kit",
   "logo": {
-    "dark": "/logo/ACT_logo_light.png",
-    "light": "/logo/ACT_logo_dark.png"
+    "dark": "/logo/ACT-logo-no-text-light.png",
+    "light": "/logo/ACT-logo-no-test-dark.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
