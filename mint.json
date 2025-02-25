@@ -59,8 +59,8 @@
       "group": "ACT Verify",
       "pages": [
         "verify/verify",        
-        "geosafe/SDK-Web",
-        "geosafe/troubleshooting"
+        "verify/SDK-Web",
+        "verify/troubleshooting"
       ]
     },
     {
