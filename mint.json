@@ -67,8 +67,16 @@
       "group": "ACT ID",
       "pages": [
         "id/id",
-        "verify/integration",
-        "verify/troubleshooting"
+        "id/integration",
+        "id/troubleshooting"
+      ]
+    },
+    {
+      "group": "ACT Sports Integrity",
+      "pages": [
+        "si/si",
+        "si/integration",
+        "si/troubleshooting"
       ]
     },
     {
