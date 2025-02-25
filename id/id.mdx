@@ -16,33 +16,26 @@ Trust **_Act ID_** for top-tier Identity Verification Services. Streamline authe
 
 ```mermaid
 
+%%{init: { "flowchart": { "htmlLabels": false }}}%%
 graph TB;
-    A["🙋  UserID: ACT123456"];
-    B["✍ Document Verification"];
-    C["❤️ Liveness<br />Check"];
-    D["💰 AML<br />Screening"];
+    A["🙋<br>&nbsp;&nbsp;UserID: ACT123456&nbsp;&nbsp;&nbsp;"];
+    B["✍<br>Document Verification"];
+    C["❤️<br>&nbsp;&nbsp;&nbsp;&nbspLiveness Check&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"];
+    D["💰<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AML Screening&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"];
     E["✔️ Approved"];
     F["❌ Declined"];
-    A--> B;
-    B--> C;
-    C--> D;
-    D--> E & F;
 
-    classDef largeText font-size:20px;
-    class A largeText;
-    class B largeText;
-    class C largeText;
-    class D largeText;
-    class E largeText;
-    class F largeText;
+    A --> B;
+    B --> C;
+    C --> D;
+    D --> E;
+    D --> F;
+    %% Classes
+    classDef largeText font-size:20px, text-align:center;
+    class A,B,C,D largeText;
 
-    style A width:300px
-    style B width:300px
-    style C width:300px
-    style D width:300px
-    
-    style E fill:#d5e8d4,stroke:#82b366,stroke-width:2px
-    style F fill:#f8cecc,stroke:#b85450,stroke-width:2px
+    style E fill:#d5e8d4,stroke:#82b366,stroke-width:2px, width:200px, display:block, margin:auto;
+    style F fill:#f8cecc,stroke:#b85450,stroke-width:2px, width:200px, display:block, margin:auto;
 
 ```
 #### Elevate trust and security with approved KYC provider 
