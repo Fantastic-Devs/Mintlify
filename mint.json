@@ -47,19 +47,26 @@
       ]
     },
     {
-      "group": "ACT Geosafe",
+      "group": "ACT Geo",
       "pages": [
         "geosafe/geosafe",        
         "geosafe/SDK-iOS",
         "geosafe/SDK-Android",
+        "geosafe/troubleshooting"
+      ]
+    },
+    {
+      "group": "ACT Verify",
+      "pages": [
+        "verify/verify",        
         "geosafe/SDK-Web",
         "geosafe/troubleshooting"
       ]
     },
     {
-      "group": "ACT Verify KYC",
+      "group": "ACT ID",
       "pages": [
-        "verify/verify",
+        "id/id",
         "verify/integration",
         "verify/troubleshooting"
       ]
