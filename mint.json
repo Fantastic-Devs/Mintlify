@@ -55,8 +55,7 @@
     },
     {
       "group": "ACT Verify",
-      "pages": [
-        "verify/verify",        
+      "pages": [       
         "verify/SDK-Web"
       ]
     },
