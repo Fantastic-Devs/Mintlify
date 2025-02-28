@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Development Portal",
   "logo": {
     "dark": "/logo/ACT-logo-no-text-light.png",
     "light": "/logo/ACT-logo-no-text-dark.png"
