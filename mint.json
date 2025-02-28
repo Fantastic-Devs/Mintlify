@@ -42,8 +42,7 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart"
+        "introduction"
       ]
     },
     {
@@ -51,8 +50,7 @@
       "pages": [
         "geosafe/geosafe",        
         "geosafe/SDK-iOS",
-        "geosafe/SDK-Android",
-        "geosafe/troubleshooting"
+        "geosafe/SDK-Android"
       ]
     },
     {
@@ -75,8 +73,7 @@
       "group": "ACT Sports Integrity",
       "pages": [
         "si/si",
-        "si/integration",
-        "si/troubleshooting"
+        "si/integration"
       ]
     },
     {
