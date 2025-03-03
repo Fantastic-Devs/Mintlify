@@ -1,3 +1,4 @@
+
 ---
 title: 'SDK Integration (iOS)'
 description: 'The iOS integration document for the ACT Geosafe SDK'
@@ -314,24 +315,4 @@ ACTGeoSDK.shared.stopTimeBasedChecks()
 - `networkError': Indicates a network error. 
 - `other(message:)': Indicates other errors with a custom message.
     - ##### **Description:** 
-    - `description': A String   
-
-#### **ACTSDKModel.StartError**
-
-- `jailbroken': Indicates the device is jailbroken. *TODO: remove next version 
-- `locationPermissions': Indicates location permissions are needed. 
-- `other(message:)': Indicates other errors with a custom message. 
-    - ##### **Description:** 
-    - `description': A String 
-
-#### **ACTSDKModel.LocationCheckResult**
-
-- `simulatedBySoftware(location:referenceID:)`: Indicates the location is simulated by software and provides a referenceID. 
-
-- `locationOutside(location:referenceID:)`: Indicates the location is outside the permitted area  and provides a referenceID. 
-
-- `locationSuccess(location:referenceID:)`: Indicates the location is verified successfully and provides a referenceID. 
-
-- `other(location:message:)`: Indicates other location results with a custom message  
-
-- `jailbroken(location:referenceID:)`: Indicates the device is jailbroken and provides a referenceID. 
+    - `description':
