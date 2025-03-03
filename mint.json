@@ -35,7 +35,7 @@
     {
       "name": "Console User Guide",
       "icon": "book-open-cover",
-      "url": "https://fantastictech.mintlify.app/consoleuserguide"
+      "url": "/consoleuserguide"
     }
   ],
   "navigation": [
