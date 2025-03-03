@@ -1,0 +1,106 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Development Portal",
+  "colors": {
+    "primary": "#A30A54",
+    "light": "#EA4293",
+    "dark": "#A30A54"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          },
+          {
+            "group": "ACT ID",
+            "pages": [
+              "id/id",
+              "id/integration"
+            ]
+          },
+          {
+            "group": "ACT Sports Integrity",
+            "pages": [
+              "si/si",
+              "si/integration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Console User Guide",
+          "href": "https://integration.advancedcompliance.tech/consoleuserguide",
+          "icon": "book-open-cover"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/ACT-logo-no-text-dark.png",
+    "dark": "/logo/ACT-logo-no-text-light.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@advancedcompliance.tech"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Demo",
+      "href": "https://demo.advancedcompliance.tech"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
