@@ -27,6 +27,15 @@
             "pages": ["es/overview", "es/quickstart", "es/development"]
           }
         ]
+      },
+      {
+        "language": "pt-BR",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["pt-BR/overview", "pt-BR/quickstart", "pt-BR/development"]
+          }
+        ]
       }
     ],
     "tabs": [
