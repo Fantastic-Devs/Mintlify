@@ -7,6 +7,9 @@
     "light": "#EA4293",
     "dark": "#A30A54"
   },
+  {
+  "locales": ["en", "pt", "es"],
+  "defaultLocale": "en",
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
