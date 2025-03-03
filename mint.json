@@ -40,28 +40,6 @@
   ],
   "navigation": [
     {
-    "languages": [
-      {
-        "language": "en",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": ["en/overview", "en/quickstart", "en/development"]
-          }
-        ]
-      },
-      {
-        "language": "es",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": ["es/overview", "es/quickstart", "es/development"]
-          }
-        ]
-      }
-    ]      
-    },
-    {
       "group": "Get Started",
       "pages": [
         "introduction"
