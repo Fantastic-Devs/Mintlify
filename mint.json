@@ -16,17 +16,7 @@
     }
   },
   "locales": ["en", "pt", "es"],
-  "defaultLocale": "en"
- {
-  "localization": {
-    "defaultLocale": "en",
-    "locales": {
-      "en": "English",
-      "pt": "Português",
-      "es": "Español"
-    }
-  }
-  },
+  "defaultLocale": "en",
   "topbarLinks": [
     {
       "name": "Support",
