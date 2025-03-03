@@ -15,6 +15,16 @@
       "to": "#07C983"
     }
   },
+ {
+  "localization": {
+    "defaultLocale": "en",
+    "locales": {
+      "en": "English",
+      "pt": "Português",
+      "es": "Español"
+    }
+  }
+  },
   "topbarLinks": [
     {
       "name": "Support",
