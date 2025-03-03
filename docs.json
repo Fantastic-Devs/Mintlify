@@ -12,28 +12,118 @@
     "languages": [
       {
         "language": "en",
-        "groups": [
+"groups": [
           {
-            "group": "Getting Started",
-            "pages": ["en/overview", "en/quickstart", "en/development"]
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          },
+          {
+            "group": "ACT ID",
+            "pages": [
+              "id/id",
+              "id/integration"
+            ]
+          },
+          {
+            "group": "ACT Sports Integrity",
+            "pages": [
+              "si/si",
+              "si/integration"
+            ]
           }
         ]
       },
       {
         "language": "es",
-        "groups": [
+"groups": [
           {
-            "group": "Getting Started",
-            "pages": ["es/overview", "es/quickstart", "es/development"]
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          },
+          {
+            "group": "ACT ID",
+            "pages": [
+              "id/id",
+              "id/integration"
+            ]
+          },
+          {
+            "group": "ACT Sports Integrity",
+            "pages": [
+              "si/si",
+              "si/integration"
+            ]
           }
         ]
       },
       {
         "language": "pt-BR",
-        "groups": [
+"groups": [
           {
-            "group": "Getting Started",
-            "pages": ["pt-BR/overview", "pt-BR/quickstart", "pt-BR/development"]
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          },
+          {
+            "group": "ACT ID",
+            "pages": [
+              "id/id",
+              "id/integration"
+            ]
+          },
+          {
+            "group": "ACT Sports Integrity",
+            "pages": [
+              "si/si",
+              "si/integration"
+            ]
           }
         ]
       }
