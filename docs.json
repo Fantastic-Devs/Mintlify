@@ -22,15 +22,15 @@
           {
             "group": "ACT Geo",
             "pages": [
-              "/lang/en/geosafe/geosafe",
-              "/lang/en/geosafe/SDK-iOS",
-              "/lang/en/geosafe/SDK-Android"
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
             ]
           },
           {
             "group": "ACT Verify",
             "pages": [
-              "/lang/en/verify/SDK-Web"
+              "lang/en/verify/SDK-Web"
             ]
           },
           {
@@ -100,15 +100,15 @@
           {
             "group": "ACT Geo",
             "pages": [
-              "/lang/pt-BR/geosafe/geosafe",
-              "/lang/pt-BR/geosafe/SDK-iOS",
-              "/lang/pt-BR/geosafe/SDK-Android"
+              "lang/pt-BR/geosafe/geosafe",
+              "lang/pt-BR/geosafe/SDK-iOS",
+              "lang/pt-BR/geosafe/SDK-Android"
             ]
           },
           {
             "group": "ACT Verify",
             "pages": [
-              "/lang/pt-BR/verify/SDK-Web"
+              "lang/pt-BR/verify/SDK-Web"
             ]
           },
           {
@@ -121,8 +121,8 @@
           {
             "group": "ACT Sports Integrity",
             "pages": [
-              "/lang/pt-BR/si/si",
-              "/lang/pt-BR/si/integration"
+              "lang/pt-BR/si/si",
+              "lang/pt-BR/si/integration"
             ]
           }
         ]
