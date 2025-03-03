@@ -38,7 +38,8 @@
       "url": "https://integration.advancedcompliance.tech/consoleuserguide"
     }
   ],
-  "navigation": {
+  "navigation": [
+    {
     "languages": [
       {
         "language": "en",
@@ -59,8 +60,8 @@
         ]
       }
     ]
-  }
-  "navigation": [
+  }      
+    },
     {
       "group": "Get Started",
       "pages": [
