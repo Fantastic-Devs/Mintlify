@@ -50,45 +50,6 @@
         ]
       },
       {
-        "language": "es",
-"groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction"
-            ]
-          },
-          {
-            "group": "ACT Geo",
-            "pages": [
-              "geosafe/geosafe",
-              "geosafe/SDK-iOS",
-              "geosafe/SDK-Android"
-            ]
-          },
-          {
-            "group": "ACT Verify",
-            "pages": [
-              "verify/SDK-Web"
-            ]
-          },
-          {
-            "group": "ACT ID",
-            "pages": [
-              "id/id",
-              "id/integration"
-            ]
-          },
-          {
-            "group": "ACT Sports Integrity",
-            "pages": [
-              "si/si",
-              "si/integration"
-            ]
-          }
-        ]
-      },
-      {
         "language": "pt-BR",
 "groups": [
           {
