@@ -1,47 +1,46 @@
-
 ---
-title: 'SDK Integration (iOS)'
-description: 'The iOS integration document for the ACT Geosafe SDK'
+title: 'Integração SDK (iOS)'
+description: 'O documento de integração iOS para o ACT Geosafe SDK'
 icon: 'apple'
 ---
 
-Document Version: 0.1.15 pt
+Versão do documento: 0.1.15 pt
 
-SDK Version: 1.1 
+Versão do SDK: 1.1
 
-Supports iOS Version: 13+ 
+Suporta iOS Versão: 13+
 
-## **Overview** 
+## **Visão geral** 
 
-**_ACTGeoSDK_** is an iOS SDK designed for compliance purposes. This SDK ensures that the user's location complies with regulatory requirements by performing checks and providing the necessary feedback to your application. 
+**_ACTGeoSDK_** é um SDK iOS projetado para fins de conformidade. Este SDK garante que a localização do usuário esteja em conformidade com os requisitos regulamentares, realizando verificações e fornecendo o feedback necessário para seu aplicativo 
 
-## **Integration** 
+## **Integração** 
 
-### **Manual Integration**
+### **Integração Manual**
 
-#### **Download the SDK**
+#### **Baixe o SDK**
  
-Obtain the latest version of the **_ACTGeoSDK_** from Fantastic Tech. 
+Obtenha a versão mais recente do **_ACTGeoSDK_** da Fantastic Tech. 
 
-#### **Add the SDK to Your Project** 
+#### **Adicione o SDK ao seu projeto** 
 
-- Drag and drop the **_ACTGeoSDK.framework_** file into your Xcode project. 
-- Ensure that the framework is added to the "Embedded Binaries" and "Link Binary With Libraries" sections in your project settings. 
-- Verify that **_ACTGeoSDK.framework_** appears in the "Frameworks, Libraries, and Embedded Content" section with "Embed & Sign" selected. 
+- Arraste e solte o arquivo **_ACTGeoSDK.framework_** no seu projeto Xcode. 
+- Certifique-se de que a estrutura seja adicionada às seções "Binários incorporados" e "Vincular binários com bibliotecas" nas configurações do seu projeto. 
+- Verifique se **_ACTGeoSDK.framework_** aparece na seção "Estruturas, bibliotecas e conteúdo incorporado" com "Incorporar e assinar" selecionado.
 
-### **Import the SDK**
+### **Importar o SDK**
  
-In the files where you want to use the SDK, import it as follows: 
+Nos arquivos onde você deseja usar o SDK, importe-o da seguinte forma:
 
 ```swift
 import ACTGeoSDK 
 ```
 
-## **Usage** 
+## **Uso** 
 
-### **Adding Location Permissions to the App's Info.plist**
+### **Adicionando permissões de localização ao Info.plist do aplicativo**
 
-To ensure the ACTGeoSDK functions correctly, add location permissions to your app's Info.plist file. Include the following keys with appropriate messages that inform users why location access is necessary: 
+Para garantir que o ACTGeoSDK funcione corretamente, adicione permissões de localização ao arquivo Info.plist do seu aplicativo. Inclua as seguintes chaves com mensagens apropriadas que informam aos usuários por que o acesso à localização é necessário: 
 
 ```swift
 <key>NSLocationWhenInUseUsageDescription</key> 
