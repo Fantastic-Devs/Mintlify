@@ -75,7 +75,7 @@
           {
             "group": "ACT ID",
             "pages": [
-              "id/id",
+              "lang/pt-BR/id/id",
               "id/integration"
             ]
           },
