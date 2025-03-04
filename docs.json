@@ -43,8 +43,8 @@
           {
             "group": "ACT Sports Integrity",
             "pages": [
-              "/lang/en/si/si",
-              "/lang/en/si/integration"
+              "si/si",
+              "si/integration"
             ]
           }
         ]
