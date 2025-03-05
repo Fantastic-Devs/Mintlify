@@ -32,20 +32,6 @@
             "pages": [
               "verify/SDK-Web"
             ]
-          },
-          {
-            "group": "ACT ID",
-            "pages": [
-              "id/id",
-              "id/integration"
-            ]
-          },
-          {
-            "group": "ACT Sports Integrity",
-            "pages": [
-              "si/si",
-              "si/integration"
-            ]
           }
         ]
       },
@@ -70,20 +56,6 @@
             "group": "ACT Verify",
             "pages": [
               "lang/pt-BR/verify/SDK-Web"
-            ]
-          },
-          {
-            "group": "ACT ID",
-            "pages": [
-              "lang/pt-BR/id/id",
-              "id/integration"
-            ]
-          },
-          {
-            "group": "ACT Sports Integrity",
-            "pages": [
-              "lang/pt-BR/si/si",
-              "lang/pt-BR/si/integration"
             ]
           }
         ]
