@@ -4,247 +4,249 @@ description: 'Guia do usuário para o portal de administração ACT-Geo'
 icon: 'book-open-cover'
 ---
  
-VERISON: 0.1 
+VERSÃO: 0.1
 
-## Overview 
+## Visão geral 
 
-### Portal Access 
+### Acesso ao Portal
 
-#### Web Address 
+#### Endereço da Web
 
-The ACT-GeoSafe Admin Portal can be found at the following Address: 
+O Portal de Administração ACT-GeoSafe pode ser encontrado no seguinte Endereço:
 
-https://sandbox.advancedcompliance.tech/login 
+https://sandbox.advancedcompliance.tech/login
 
-#### Login 
+#### Login
 
-To Login to the Portal use the credentials sent to you via email – if you haven’t received an email please contact support@fantastic.tech 
+Para efetuar login no Portal, use as credenciais enviadas a você por e-mail – se você não recebeu um e-mail, entre em contato com support@fantastic.tech
 
-## Dashboard 
+## Painel
 
-### Map View 
+### Visualização do Mapa
 
 <img height="250" src="images/console-screen-shot.png" />
 
-The Admin Portal Dashboard lets you view lookup data geographically via a map – from this you can quickly spot any patterns/issues you may have with your customers validating their location. 
+O Painel do Portal do Administrador permite que você visualize dados de pesquisa geograficamente por meio de um mapa – a partir dele, você pode identificar rapidamente quaisquer padrões/problemas que possa ter com seus clientes validando sua localização.
 
-There are four sections to the Map View screen 
+Há quatro seções na tela Visualização do Mapa
 
-- **Map**<br />
-This section details geographical representation of the lookups for the current day 
- 
-- **Activity**<br />
-This section displays a pie chart showing the total number of lookups that have occurred on the selected date.  Lookups made inside the region are represented by green and the lookups that fail or are outside are represented by red. 
+- **Mapa**<br />
+Esta seção detalha a representação geográfica das pesquisas para o dia atual
 
-- **Devices**<br />
-This section displays a pie chart showing the total number of lookups, split by device type, on the specified date. 
+- **Atividade**<br />
+Esta seção exibe um gráfico de pizza mostrando o número total de pesquisas que ocorreram na data selecionada. As pesquisas feitas dentro da região são representadas por verde e as pesquisas que falham ou estão fora são representadas por vermelho.
 
-- **Top 3 reasons for fail**<br />
-This chart shows the top three reasons for unsuccessful lookups and splits them up by the reason they failed – To view all the failures click on the Top 3 Reasons for Fail link 
+- **Dispositivos**<br />
+Esta seção exibe um gráfico de pizza mostrando o número total de pesquisas, divididas por tipo de dispositivo, na data especificada.
 
-Data Filters  
+- **3 principais motivos para falha**<br />
+Este gráfico mostra os três principais motivos para pesquisas malsucedidas e os divide pelo motivo pelo qual falharam – Para visualizar todas as falhas, clique no link 3 principais motivos para falha
 
-There are 3 filters that can be applied to the map, they are available on the top left of the map: 
+Filtros de dados
 
-## Lookup Reponses 
+Existem 3 filtros que podem ser aplicados ao mapa, eles estão disponíveis no canto superior esquerdo do mapa:
+
+## Respostas de pesquisa
 <table border="0">
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 0 Success.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Inside location</b><br />
-          This is returned if the device requests a location from within the designated jurisdiction
-    </td>
-  </tr>
+<tr>
+<td>
+<img src="images/pointers/pointer 0 Success.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização interna</b><br />
+Isso é retornado se o dispositivo solicitar uma localização dentro da jurisdição designada
+</td>
+</tr>
 
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 3 Location Outside.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Outside location</b><br />
-          This is returned by the middleware when it detects that the device is outside of location
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 2 Unsupported Location.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Device not supported</b><br />
-          This is returned when the SDK detects that the device does not support GPS
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 1 Unknown Location.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Unknown location</b><br />
-          This is returned if the device requests a location check before the service has completely started and therefore, we do not have a current location for the device.
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 5 Disabled.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Location disabled</b><br />
-          This is returned when the SDK detects that the device has disabled its GPS
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 6 Jailbroken.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Modified device</b><br />
-          This is returned if the SDK detects that the device is jailbroken
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 7 Simulated By Software.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Location Simulated by Software</b><br />
-          This is returned if the SDK detects that the location is simulated by software (i.e. FakeGPS)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 8 Undetermined Middleware.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Undetermined location</b><br />
-          Should never happen – occurs when we have bad config in the DB for that app and not able to determine if it is inside or not
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 9 Developer Mode.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Developer Mode</b><br />
-          This is returned if the SDK detects that device is running in developer mode
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 10 Device Blocked.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Device Blocked</b><br />
-          This is returned if the backend system finds this device on a blocked accounts list
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 11 Account Blocked.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Account Blocked</b><br />
-          This is returned if the backend system finds this account on a blocked accounts list
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 13 Device Blocked Globally.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Global Blocked</b><br />
-          This is returned when the middleware detects that the Device is on the GeoSafe’s Global Blocked list, which means the device is blocked across all jurisdictions
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 12 Proxy Detected.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Proxy Detected</b><br />
-          This is returned if the backend system finds determines that this device is running a VPN
-    </td>
-  </tr>
-    
-  <tr>
-    <td>
-      <img src="images/pointers/pointer 4 Other.png" />
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>
-      <b>Other</b><br />
-         Any other reason other than these listed 
-    </td>
-  </tr>
+<tr>
+<td>
+<img src="images/pointers/pointer 3 Localização Outside.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização externa</b><br />
+Isso é retornado pelo middleware quando ele detecta que o dispositivo está fora da localização
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 2 Unsupported Location.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Dispositivo não suportado</b><br />
+Isso é retornado quando o SDK detecta que o dispositivo não suporta GPS
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 1 Unknown Location.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização desconhecida</b><br />
+Isso é retornado se o dispositivo solicitar uma verificação de localização antes que o serviço tenha iniciado completamente e, portanto, não temos uma localização atual para o dispositivo.
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 5 Disabled.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização desabilitada</b><br />
+Isso é retornado quando o SDK detecta que o dispositivo desabilitou seu GPS
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 6 Jailbroken.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Dispositivo modificado</b><br />
+Isso é retornado se o SDK detecta que o dispositivo está com jailbreak
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 7 Simulated By Software.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização simulada por software</b><br />
+Isso é retornado se o SDK detectar que a localização é simulada por software (por exemplo, FakeGPS)
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 8 Undetermined Middleware.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Localização indeterminada</b><br />
+Nunca deve acontecer – ocorre quando temos uma configuração ruim no banco de dados para esse aplicativo e não conseguimos determinar se ele está dentro ou não
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 9 Developer Mode.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Developer Mode</b><br />
+Isso é retornado se o SDK detectar que o dispositivo está sendo executado no modo de desenvolvedor
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 10 Device Blocked.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Device Blocked</b><br />
+Isso é retornado se o sistema de backend encontrar este dispositivo em uma lista de contas bloqueadas
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 11 Conta bloqueada.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Conta bloqueada</b><br />
+Isso é retornado se o sistema de backend encontrar essa conta em uma lista de contas bloqueadas
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 13 Dispositivo bloqueado globalmente.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Bloqueado globalmente</b><br />
+Isso é retornado quando o middleware detecta que o dispositivo está na lista de bloqueados globais do GeoSafe, o que significa que o dispositivo está bloqueado em todas as jurisdições
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 12 Proxy Detected.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Proxy Detected</b><br />
+Isto é retornado se o ba
+O sistema ckend encontra e determina que este dispositivo está executando uma VPN
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/pointers/pointer 4 Other.png" />
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<b>Other</b><br />
+Qualquer outro motivo além dos listados
+</td>
+</tr>
 </table>
 
-## Pie Charts 
+## Gráficos de pizza
 
-There are 3 different pie charts available on the main dashboard.  
+Há 3 gráficos de pizza diferentes disponíveis no painel principal.
 
- <table>
-  <tr>
-    <td>
-      <img src="images/Pie1.png" />
-    </td>
-    <td>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
-    <td>
-      <b>Activity</b><br />
-      This chart shows the total number of lookups that have occurred for that region.  Lookups made inside the region are represented by green and the lookups outside are represented by red. 
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="images/Pie2.png" />
-    </td>
-    <td>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
-    <td>
-      <b>Devices</b><br />
-      This chart shows the split of the lookups made by device type (iOS, Android and Web) for the selected region 
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="images/Pie3.png" />
-    </td>
-    <td>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
-    <td>
-      <b>Top 3 Reasons for Fail</b><br />
-      This chart shows the proportion of unsuccessful lookups and splits them up by the reason they failed – to view all the reasons why the lookups failed click on the Top 3 Reasons for Fail link 
-    </td>
-  </tr>
+<table>
+<tr>
+<td>
+<img src="images/Pie1.png" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<b>Atividade</b><br />
+Este gráfico mostra o número total de pesquisas que ocorreram para essa região. As pesquisas feitas dentro da região são representadas por verde e as pesquisas fora são representadas por vermelho.
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/Pie2.png" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<b>Dispositivos</b><br />
+Este gráfico mostra a divisão das pesquisas feitas por tipo de dispositivo (iOS, Android e Web) para a região selecionada
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/Pie3.png" />
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<b>3 principais motivos para falha</b><br />
+Este gráfico mostra a proporção de pesquisas malsucedidas e as divide pelo motivo pelo qual falharam – para visualizar todos os motivos pelos quais as pesquisas falharam, clique no link 3 principais motivos para falha
+</td>
+</tr>
 </table>
+
 
 <table>
   <tr>
