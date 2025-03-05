@@ -16,7 +16,8 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction"
+              "introduction",
+              "consoleuserguide"
             ]
           },
           {
@@ -41,7 +42,8 @@
           {
             "group": "Começar",
             "pages": [
-              "lang/pt-BR/introduction"
+              "lang/pt-BR/introduction",
+              "lang/pt-BR/consoleuserguide"
             ]
           },
           {
