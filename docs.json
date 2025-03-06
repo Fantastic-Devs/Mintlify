@@ -92,7 +92,8 @@
     "socials": {
       "website": "https://advancedcompliance.tech"
     },
-    "links": {
+    "links": [
+      {
       "header": "Company",
       "items": [
          {
@@ -105,5 +106,6 @@
          }
       ]
     }
+      ]
   }
 }
