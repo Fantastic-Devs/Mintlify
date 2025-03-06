@@ -12,7 +12,7 @@
     "languages": [
       {
         "language": "en",
-"groups": [
+		"groups": [
           {
             "group": "Get Started",
             "pages": [
@@ -38,7 +38,7 @@
       },
       {
         "language": "pt-BR",
-"groups": [
+		"groups": [
           {
             "group": "Começar",
             "pages": [
@@ -66,11 +66,7 @@
 
     "global": {
       "anchors": [
-    {
-      "name": "Console User Guide",
-      "icon": "book-open-cover",
-      "url": "https://integration.advancedcompliance.tech/consoleuserguide"
-    }
+
       ]
     }
   },
