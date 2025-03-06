@@ -70,8 +70,9 @@
         "global": {
             "anchors": [
                 {
-                    "name": "Test Test Test",
-                    "href": "#"
+                    "anchor": "Test Test Test",
+                    "icon": "apple",
+                    "href": "https://bbc.co.uk"
                 }                
             ]
         }
