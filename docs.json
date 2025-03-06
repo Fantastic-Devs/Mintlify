@@ -92,22 +92,6 @@
     "socials": {
       "x": "https://x.com/yourprofile",
       "website": "https://yourwebsite.com"
-    },
-    "links": [
-      {
-        "title": "Resources",
-        "links": [
-          { "label": "Blog", "url": "https://yourwebsite.com/blog" },
-          { "label": "Contact", "url": "https://yourwebsite.com/contact" }
-        ]
-      },
-      {
-        "title": "Community",
-        "links": [
-          { "label": "GitHub", "url": "https://github.com/yourrepo" },
-          { "label": "Discord", "url": "https://discord.com/invite/yourinvite" }
-        ]
-      }
-    ]
+    }
   }
 }
