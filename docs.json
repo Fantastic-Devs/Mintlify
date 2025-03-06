@@ -89,13 +89,12 @@
         }
     },
   "footer": {
-    "copyright": "© Copyright 2025 Advanced Compliance Technology Ltd",
     "socials": {
       "website": "https://advancedcompliance.tech"
     },
     "links": [
       {
-      "header": "Company",
+      "header": "Legal",
       "items": [
          {
           "label": "Terms & Conditions",
@@ -108,7 +107,7 @@
       ]
     },
         {
-      "header": "Company II",
+      "header": "Company",
       "items": [
          {
           "label": "Advanced Compliance Technology Ltd",
