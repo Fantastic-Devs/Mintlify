@@ -68,7 +68,11 @@
             }
         ],
         "global": {
-            "anchors": []
+            "anchors": [
+                {
+                    "anchor": "Test Test Test"   
+                }                
+            ]
         }
     },
     "logo": {
