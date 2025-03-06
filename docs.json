@@ -97,12 +97,12 @@
       "header": "Company",
       "items": [
          {
-          "label": "GK Test",
-          "href": "https://advancedcompliance.tech"
+          "label": "Terms & Conditions",
+          "href": "https://dev-admin.advancedcompliance.tech/terms-and-conditions"
          },
           {
-          "label": "GK Test II",
-          "href": "https://advancedcompliance.tech"
+          "label": "Privacy Policy",
+          "href": "https://dev-admin.advancedcompliance.tech/privacy-policy"
          }
       ]
     },
@@ -110,12 +110,10 @@
       "header": "Company II",
       "items": [
          {
-          "label": "GK Test",
-          "href": "https://advancedcompliance.tech"
+          "label": "Advanced Compliance Technology Ltd"
          },
           {
-          "label": "GK Test II",
-          "href": "https://advancedcompliance.tech"
+          "label": "Las Vegas, 89119"
          }
       ]
     }
