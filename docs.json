@@ -12,25 +12,12 @@
     "languages": [
       {
         "language": "en",
-		"groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "consoleuserguide"{
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Development Portal",
-  "colors": {
-    "primary": "#A30A54",
-    "light": "#EA4293",
-    "dark": "#A30A54"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "languages": [
+		
+"tabs": [
       {
-        "language": "en",
+        "tab": "Documentation",		
+		
+		
 		"groups": [
           {
             "group": "Get Started",
@@ -54,9 +41,11 @@
             ]
           }
         ]
-      },
+		
+		
+},
       {
-        "language": "pt-BR",
+        "tab": "Documentation",
 		"groups": [
           {
             "group": "Começar",
@@ -80,6 +69,73 @@
             ]
           }
         ]
+	}
+]		
+		
+		
+      },
+      {
+        "language": "pt-BR",
+		
+		
+"tabs": [
+      {
+        "tab": "Documentation",		
+		
+		"groups": [
+          {
+            "group": "Começar",
+            "pages": [
+              "lang/pt-BR/introduction",
+              "lang/pt-BR/consoleuserguide"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "lang/pt-BR/geosafe/geosafe",
+              "lang/pt-BR/geosafe/SDK-iOS",
+              "lang/pt-BR/geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "lang/pt-BR/verify/SDK-Web"
+            ]
+          }
+        ]
+		
+},
+      {
+        "tab": "Documentation",
+		"groups": [
+          {
+            "group": "Começar",
+            "pages": [
+              "lang/pt-BR/introduction",
+              "lang/pt-BR/consoleuserguide"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "lang/pt-BR/geosafe/geosafe",
+              "lang/pt-BR/geosafe/SDK-iOS",
+              "lang/pt-BR/geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "lang/pt-BR/verify/SDK-Web"
+            ]
+          }
+        ]
+	}
+]		
+		
+		
       }
     ],
 
@@ -103,134 +159,6 @@
     "primary": {
       "type": "button",
       "label": "Demoooo",
-      "href": "https://demo.advancedcompliance.tech"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
-}
-            ]
-          },
-          {
-            "group": "ACT Geo",
-            "pages": [
-              "geosafe/geosafe",
-              "geosafe/SDK-iOS",
-              "geosafe/SDK-Android"
-            ]
-          },
-          {
-            "group": "ACT Verify",
-            "pages": [
-              "verify/SDK-Web"
-            ]
-          }
-        ]
-      },
-      {
-        "language": "pt-BR",
-		"tabs": [
-      {
-        "tab": "Documentation",
-		"groups": [
-          {
-            "group": "Começar",
-            "pages": [
-              "lang/pt-BR/introduction",
-              "lang/pt-BR/consoleuserguide"
-            ]
-          },
-          {
-            "group": "ACT Geo",
-            "pages": [
-              "lang/pt-BR/geosafe/geosafe",
-              "lang/pt-BR/geosafe/SDK-iOS",
-              "lang/pt-BR/geosafe/SDK-Android"
-            ]
-          },
-          {
-            "group": "ACT Verify",
-            "pages": [
-              "lang/pt-BR/verify/SDK-Web"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
-      }
-    ],},
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction"
-            ]
-          },
-          {
-            "group": "ACT Geo",
-            "pages": [
-              "geosafe/geosafe",
-              "geosafe/SDK-iOS",
-              "geosafe/SDK-Android"
-            ]
-          },
-          {
-            "group": "ACT Verify",
-            "pages": [
-              "verify/SDK-Web"
-            ]
-          },
-          {
-            "group": "ACT ID",
-            "pages": [
-              "id/id",
-              "id/integration"
-            ]
-          },
-          {
-            "group": "ACT Sports Integrity",
-            "pages": [
-              "si/si",
-              "si/integration"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
-      }
-    ],
-    "global": {
-      "anchors": [
-
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/ACT-logo-no-text-dark.png",
-    "dark": "/logo/ACT-logo-no-text-light.png"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@advancedcompliance.tech"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Demoo",
       "href": "https://demo.advancedcompliance.tech"
     }
   },
