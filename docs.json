@@ -63,7 +63,51 @@
         ]
       }
     ],
-
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          },
+          {
+            "group": "ACT ID",
+            "pages": [
+              "id/id",
+              "id/integration"
+            ]
+          },
+          {
+            "group": "ACT Sports Integrity",
+            "pages": [
+              "si/si",
+              "si/integration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
+      }
+    ],
     "global": {
       "anchors": [
 
