@@ -88,12 +88,12 @@
             "href": "https://demo.advancedcompliance.tech"
         }
     },
-    "footer": {
-
-
-
-
-"groups": [
+  "footer": {
+    "socials": {
+      "x": "https://x.com/yourprofile",
+      "website": "https://yourwebsite.com"
+    },
+    "links": [
       {
         "title": "Resources",
         "links": [
@@ -109,9 +109,5 @@
         ]
       }
     ]
-
-
-
-        
-    }
+  }
 }
