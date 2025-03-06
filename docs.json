@@ -17,7 +17,103 @@
             "group": "Get Started",
             "pages": [
               "introduction",
+              "consoleuserguide"{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Development Portal",
+  "colors": {
+    "primary": "#A30A54",
+    "light": "#EA4293",
+    "dark": "#A30A54"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "languages": [
+      {
+        "language": "en",
+		"groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
               "consoleuserguide"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "geosafe/geosafe",
+              "geosafe/SDK-iOS",
+              "geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "verify/SDK-Web"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt-BR",
+		"groups": [
+          {
+            "group": "Começar",
+            "pages": [
+              "lang/pt-BR/introduction",
+              "lang/pt-BR/consoleuserguide"
+            ]
+          },
+          {
+            "group": "ACT Geo",
+            "pages": [
+              "lang/pt-BR/geosafe/geosafe",
+              "lang/pt-BR/geosafe/SDK-iOS",
+              "lang/pt-BR/geosafe/SDK-Android"
+            ]
+          },
+          {
+            "group": "ACT Verify",
+            "pages": [
+              "lang/pt-BR/verify/SDK-Web"
+            ]
+          }
+        ]
+      }
+    ],
+
+    "global": {
+      "anchors": [
+
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/ACT-logo-no-text-dark.png",
+    "dark": "/logo/ACT-logo-no-text-light.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@advancedcompliance.tech"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Demoooo",
+      "href": "https://demo.advancedcompliance.tech"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
             ]
           },
           {
