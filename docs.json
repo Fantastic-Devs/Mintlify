@@ -63,10 +63,6 @@
                                 ]
                             }
                         ]
-                    },
-                    {
-                        "tab": "Playground da API",
-                        "openapi": "https://dev-actgeo-si-demo-cbc4f3bjf9cuckfh.uksouth-01.azurewebsites.net/swagger/v1/swagger.json"
                     }
                 ]
             }
