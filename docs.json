@@ -125,7 +125,11 @@
     ],
     "global": {
       "anchors": [
-
+    {
+      "name": "Console User Guide",
+      "icon": "book-open-cover",
+      "url": "https://integration.advancedcompliance.tech/consoleuserguide"
+    }
       ]
     }
   },
