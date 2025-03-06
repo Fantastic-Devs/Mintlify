@@ -38,6 +38,9 @@
       },
       {
         "language": "pt-BR",
+		"tabs": [
+      {
+        "tab": "Documentation",
 		"groups": [
           {
             "group": "Começar",
@@ -61,6 +64,10 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "API Reference",
+        "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
       }
     ],
     "tabs": [
