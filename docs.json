@@ -76,29 +76,7 @@
                     },
                     {
                         "tab": "Playground da API",
-                        "groups": [
-                            {
-                                "group": "Começar",
-                                "pages": [
-                                    "lang/pt-BR/introduction",
-                                    "lang/pt-BR/consoleuserguide"
-                                ]
-                            },
-                            {
-                                "group": "ACT Geo",
-                                "pages": [
-                                    "lang/pt-BR/geosafe/geosafe",
-                                    "lang/pt-BR/geosafe/SDK-iOS",
-                                    "lang/pt-BR/geosafe/SDK-Android"
-                                ]
-                            },
-                            {
-                                "group": "ACT Verify",
-                                "pages": [
-                                    "lang/pt-BR/verify/SDK-Web"
-                                ]
-                            }
-                        ]
+                        "openapi": "https://dev-actgeo-si-demo-cbc4f3bjf9cuckfh.uksouth-01.azurewebsites.net/swagger/v1/swagger.json"
                     }
                 ]
             }
