@@ -70,7 +70,8 @@
         "global": {
             "anchors": [
                 {
-                    "anchor": "Test Test Test"   
+                    "name": "Test Test Test",
+                    "href": "#"
                 }                
             ]
         }
