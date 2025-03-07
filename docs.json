@@ -45,8 +45,8 @@
                             {
                                 "group": "Contact US",
                                 "pages": [
-                                    "Submission Form",
-                                    "Contact Us Form"
+                                    "contact/submission-form",
+                                    "contact/contact-us-form"
                                 ]
                             }
                         ]
