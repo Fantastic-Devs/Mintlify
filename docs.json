@@ -93,11 +93,7 @@
         ],
         "global": {
             "anchors": [
-                {
-                    "anchor": "Test Test Test I",
-                    "icon": "apple",
-                    "href": "https://bbc.co.uk"
-                }                
+               
             ]
         }
     },
