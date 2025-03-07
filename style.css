@@ -8,5 +8,5 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  border: 3px solid #A30A54;
+  border: 1px solid #A30A54;
 }
