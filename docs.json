@@ -51,23 +51,7 @@
                             }
                         ]
                     }
-                ],
-
-
-
-                
-                            "anchors": [
-                {
-                    "anchor": "Test Test Test II",
-                    "icon": "apple",
-                    "href": "https://bbc.co.uk"
-                }                
-            ]
-
-
-
-
-                
+                ]                
             },
             {
                 "language": "pt-BR",
