@@ -4,21 +4,6 @@ description: 'Form to contact us'
 icon: 'phone-rotary'
 ---
 
-<style>
-:root {
-  ...
-  --width-inputs: 250px;
-  --width-textarea: 450px;
-  --height-textarea: 250px;
-}
-
-select,
-input[type="text"],
-... {
-  width: var(--width-inputs);
-  max-width: 100%;
-}
-</style>
 
 <form>
    <table>
@@ -28,7 +13,7 @@ input[type="text"],
          </td>
          <td>&nbsp;</td>
          <td>
-            <input type="text" name="business-name" />
+            <input type="text" name="business-name" style="width:500px"/>
          </td>
       </tr>
       <tr>
