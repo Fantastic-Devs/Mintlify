@@ -4,6 +4,22 @@ description: 'Form to contact us'
 icon: 'phone-rotary'
 ---
 
+<style>
+:root {
+  ...
+  --width-inputs: 250px;
+  --width-textarea: 450px;
+  --height-textarea: 250px;
+}
+
+select,
+input[type="text"],
+... {
+  width: var(--width-inputs);
+  max-width: 100%;
+}
+</style>
+
 <form>
    <table>
       <tr>
@@ -18,7 +34,6 @@ icon: 'phone-rotary'
       <tr>
          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
       </tr>
-
       <tr>
          <td>
             <label>Description:</label>
@@ -127,7 +142,6 @@ icon: 'phone-rotary'
       <tr>
          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
       </tr>
-
       <tr>
          <td>  
             <label>Platform Provider Office Address:</label>
