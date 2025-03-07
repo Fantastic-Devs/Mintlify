@@ -46,7 +46,7 @@
                 
                             "anchors": [
                 {
-                    "anchor": "Test Test Test",
+                    "anchor": "Test Test Test II",
                     "icon": "apple",
                     "href": "https://bbc.co.uk"
                 }                
@@ -86,7 +86,7 @@
         "global": {
             "anchors": [
                 {
-                    "anchor": "Test Test Test",
+                    "anchor": "Test Test Test I",
                     "icon": "apple",
                     "href": "https://bbc.co.uk"
                 }                
