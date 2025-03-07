@@ -16,3 +16,7 @@ button[type=submit]{
   background-color: #A30A54;
   color: white;
 }
+
+button[type=submit]:hover {
+  background-color: #EA4293;
+}
