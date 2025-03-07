@@ -10,3 +10,8 @@ input[type=text] {
 input[type=text]:focus {
   border: 1px solid #A30A54;
 }
+
+button[type=submit]{
+  background-color: #A30A54;
+  color: white;
+}
