@@ -98,8 +98,8 @@
                             {
                                 "group": "Contate-nos",
                                 "pages": [
-                                    "Formulário de Submissão",
-                                    "Formulário de contato"
+                                    "lang/pt-BR/contact/submission-form",
+                                    "lang/pt-BR/contact/contact-us-form"
                                 ]
                             }
                         ]
