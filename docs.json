@@ -38,6 +38,18 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "tab": "Contact Us",
+                        "groups": [
+                            {
+                                "group": "Contact US",
+                                "pages": [
+                                    "Submission Form",
+                                    "Contact Us Form"
+                                ]
+                            }
+                        ]
                     }
                 ],
 
@@ -76,6 +88,18 @@
                                     "lang/pt-BR/geosafe/geosafe",
                                     "lang/pt-BR/geosafe/SDK-iOS",
                                     "lang/pt-BR/geosafe/SDK-Android"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tab": "Contate-nos",
+                        "groups": [
+                            {
+                                "group": "Contate-nos",
+                                "pages": [
+                                    "Formulário de Submissão",
+                                    "Formulário de contato"
                                 ]
                             }
                         ]
