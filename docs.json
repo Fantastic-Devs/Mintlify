@@ -14,7 +14,7 @@
                 "language": "en",
                 "tabs": [
                     {
-                        "tab": "Documentation",
+                        "tab": "ACT Geosafe",
                         "groups": [
                             {
                                 "group": "Get Started",
@@ -40,6 +40,30 @@
                         ]
                     },
                     {
+                        "tab": "ACT Verify ID",
+                        "groups": [
+                            {
+                                "group": "Contact US",
+                                "pages": [
+                                    "contact/submission-form",
+                                    "contact/contact-us-form"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tab": "ACT Sports Integrity",
+                        "groups": [
+                            {
+                                "group": "Contact US",
+                                "pages": [
+                                    "contact/submission-form",
+                                    "contact/contact-us-form"
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "tab": "Contact Us",
                         "groups": [
                             {
@@ -57,7 +81,7 @@
                 "language": "pt-BR",
                 "tabs": [
                     {
-                        "tab": "Documentation",
+                        "tab": "ACT Geosafe",
                         "groups": [
                             {
                                 "group": "Começar",
@@ -72,6 +96,30 @@
                                     "lang/pt-BR/geosafe/geosafe",
                                     "lang/pt-BR/geosafe/SDK-iOS",
                                     "lang/pt-BR/geosafe/SDK-Android"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tab": "Verify ID",
+                        "groups": [
+                            {
+                                "group": "Contate-nos",
+                                "pages": [
+                                    "lang/pt-BR/contact/submission-form",
+                                    "lang/pt-BR/contact/contact-us-form"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tab": "Sports Integrity",
+                        "groups": [
+                            {
+                                "group": "Contate-nos",
+                                "pages": [
+                                    "lang/pt-BR/contact/submission-form",
+                                    "lang/pt-BR/contact/contact-us-form"
                                 ]
                             }
                         ]
