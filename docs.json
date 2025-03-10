@@ -45,8 +45,7 @@
                             {
                                 "group": "Contact US",
                                 "pages": [
-                                    "contact/submission-form",
-                                    "contact/contact-us-form"
+                                    "id/id"
                                 ]
                             }
                         ]
@@ -106,8 +105,7 @@
                             {
                                 "group": "Contate-nos",
                                 "pages": [
-                                    "lang/pt-BR/contact/submission-form",
-                                    "lang/pt-BR/contact/contact-us-form"
+                                    "lang/pt-BR/id/id"
                                 ]
                             }
                         ]
