@@ -45,7 +45,8 @@
                             {
                                 "group": "Contact US",
                                 "pages": [
-                                    "id/id"
+                                    "id/id",
+                                    "id/integration"
                                 ]
                             }
                         ]
@@ -105,7 +106,8 @@
                             {
                                 "group": "Contate-nos",
                                 "pages": [
-                                    "lang/pt-BR/id/id"
+                                    "lang/pt-BR/id/id",
+                                    "lang/pt-BR/id/integration"
                                 ]
                             }
                         ]
