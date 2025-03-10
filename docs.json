@@ -101,7 +101,7 @@
                         ]
                     },
                     {
-                        "tab": "Verify ID",
+                        "tab": "ACT Verify ID",
                         "groups": [
                             {
                                 "group": "Contate-nos",
@@ -113,7 +113,7 @@
                         ]
                     },
                     {
-                        "tab": "Sports Integrity",
+                        "tab": "ACT Sports Integrity",
                         "groups": [
                             {
                                 "group": "Contate-nos",
