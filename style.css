@@ -26,3 +26,11 @@ img.mobile {
   border: 1px solid #A30A55;
   height: 300px;
 }
+
+span.green {
+  color: green;
+  }
+
+span.maroon {
+  color: maroon;
+}
