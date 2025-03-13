@@ -34,7 +34,7 @@
                             {
                                 "group": "ACT Verify",
                                 "pages": [
-                                    "verify/verify",
+                                    "verify/overview",
                                     "verify/SDK-Web"
                                 ]
                             }
