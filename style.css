@@ -21,3 +21,8 @@ button[type=submit]{
 button[type=submit]:hover {
   background-color: #EA4293;
 }
+
+img.mobile {
+  border: 5px solid #555;
+  height: 300px;
+}
