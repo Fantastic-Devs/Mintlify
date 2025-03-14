@@ -24,7 +24,7 @@
                                 ]
                             },
                             {
-                                "group": "ACT Geo",
+                                "group": "ACT Geosafe",
                                 "pages": [
                                     "geosafe/geosafe",
                                     "geosafe/SDK-iOS",
@@ -80,11 +80,18 @@
                                 ]
                             },
                             {
-                                "group": "ACT Geo",
+                                "group": "ACT Geosafe",
                                 "pages": [
                                     "lang/pt-BR/geosafe/geosafe",
                                     "lang/pt-BR/geosafe/SDK-iOS",
                                     "lang/pt-BR/geosafe/SDK-Android"
+                                ]
+                            },
+                            {
+                                "group": "ACT Verify",
+                                "pages": [
+                                    "lang/pt-BR/verify/overview",
+                                    "lang/pt-BR/verify/SDK-Web"
                                 ]
                             }
                         ]
