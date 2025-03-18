@@ -127,3 +127,15 @@ stop()
     console.error("Failed to stop location monitoring:", err); 
   }); 
 ```
+
+<CardGroup cols={1}>
+  <Card
+    title="Android Only:"
+    icon="Android"
+  >
+    Clears the internal state of the SDK and stops any ongoing processes. 
+  </Card>
+</CardGroup>
+```
+destroy(): Promise<string>; 
+```
