@@ -29,7 +29,8 @@
                                 "pages": [
                                     "geosafe/geosafe",
                                     "geosafe/SDK-iOS",
-                                    "geosafe/SDK-Android"
+                                    "geosafe/SDK-Android",
+                                    "geosafe/SDK-ReactNative"
                                 ]
                             },
                             {
