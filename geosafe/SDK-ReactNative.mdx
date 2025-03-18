@@ -14,3 +14,164 @@ icon: 'book-open-cover'
 
 The `ACT GEO React Native` SDK provides seamless integration with the ActGeo platform, enabling location-based services and monitoring in React Native applications. This SDK bridges native Android and iOS ActGeo functionalities to React Native, offering an easy-to-use API for developers. 
 
+### Key Features 
+
+- **Initialize ActGeo SDK:** Configure and set up the SDK with your API credentials. 
+
+- **Real-Time Location Monitoring:** Start and stop location tracking with simple commands. 
+
+- **Location Validation:** Check the current location's status. 
+
+- **Cross-Platform Support:** Works seamlessly on both Android and iOS. 
+
+### Installation 
+
+```javascript 
+npm install react-native-actgeo 
+```
+
+### Usage 
+
+```javascript 
+import { 
+  initSDK, 
+  start, 
+  stop, 
+  sendLocationCheck, 
+  destroy, 
+} from 'react-native-actgeo'; 
+```
+
+### Initialise SDK 
+
+Initializes the SDK with the necessary configuration parameters. 
+
+```javascript 
+initSDK( 
+    apiKey: string, 
+    baseURL: string 
+): Promise<void>; 
+```
+### Parameters 
+
+- **apiKey** (string): The API key for authentication. (Required) 
+
+- **baseURL** (string): The base URL of the service. (Required) 
+
+### Returns 
+
+A Promise that resolves when the SDK is successfully initialized or rejects with an error. 
+
+### Usage Example 
+
+```javascript 
+import { initSDK } from 'react-native-actgeo'; 
+ 
+// Initialize SDK 
+initSDK( 
+  "your-api-key", 
+  "https://example.com" 
+).then((result) => { 
+  console.log("SDK initialized:", result); 
+}).catch((err) => { 
+  console.error("SDK initialization failed:", err); 
+}); 
+```
+
+### Starts the location monitoring 
+
+```javascript 
+start(): Promise<string>; 
+```
+
+### Returns 
+
+A Promise that resolves with a confirmation message (string) when the monitoring starts successfully or rejects with an error. 
+
+### Usage Example 
+
+```javascript 
+import { start } from 'react-native-actgeo'; 
+ 
+// Start location monitoring 
+start() 
+  .then((message) => { 
+    console.log("Location monitoring started:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to start location monitoring:", err); 
+  }); 
+```
+
+### Stops the location monitoring 
+
+```javascript 
+stop(): Promise<string>; 
+```
+
+### Returns 
+
+A Promise that resolves with a confirmation message (string) when the monitoring stops successfully or rejects with an error. 
+
+### Usage Example 
+
+```javascript 
+import { stop } from 'react-native-actgeo'; 
+ 
+// Stop location monitoring 
+stop() 
+  .then((message) => { 
+    console.log("Location monitoring stopped:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to stop location monitoring:", err); 
+  }); 
+```
+
+<CardGroup cols={1}>
+  <Card
+    title="Android Only:"
+    icon="Android"
+  >
+    Clears the internal state of the SDK and stops any ongoing processes. 
+  </Card>
+</CardGroup>
+```javascript 
+destroy(): Promise<string>; 
+```
+
+## Returns 
+
+A Promise that resolves with a confirmation message (string) when the SDK is successfully cleared and destroyed or rejects with an error. 
+
+## Usage Example 
+
+```javascript 
+import { destroy } from 'react-native-actgeo'; 
+ 
+// Destroy the SDK instance 
+destroy() 
+  .then((message) => { 
+    console.log("SDK successfully destroyed:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to destroy SDK:", err); 
+  }); 
+```
+ 
+Requests the current location status 
+
+Requests the current location status based on the provided account ID and reason for lookup. 
+
+```javascript 
+sendLocationCheck( 
+  accountId: string, 
+  reasonForLookup: Int32 
+): Promise<string>; 
+``` 
+
+## Parameters 
+
+- **accountId (string):** The account ID associated with the location check. (Required) 
+
+- **reasonForLookup (Int32):** The reason for initiating the location check, represented as an integer. (Required) 
