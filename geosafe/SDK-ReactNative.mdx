@@ -26,3 +26,29 @@ The `ACT GEO React Native` SDK provides seamless integration with the ActGeo pla
 
 ### Installation 
 
+```
+npm install react-native-actgeo 
+```
+
+### Usage 
+
+```
+import { 
+  initSDK, 
+  start, 
+  stop, 
+  sendLocationCheck, 
+  destroy, 
+} from 'react-native-actgeo'; 
+```
+
+### Initialise SDK 
+
+Initializes the SDK with the necessary configuration parameters. 
+
+```
+initSDK( 
+    apiKey: string, 
+    baseURL: string 
+): Promise<void>; 
+```
