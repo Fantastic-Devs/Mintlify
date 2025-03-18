@@ -30,13 +30,13 @@ The `ACT GEO React Native` SDK provides seamless integration with the ActGeo pla
 
 ### Installation 
 
-'''
+```
 npm install react-native-actgeo 
-'''
+```
 
 ### Usage 
 
-'''
+```
 import { 
   initSDK, 
   start, 
@@ -44,18 +44,18 @@ import {
   sendLocationCheck, 
   destroy, 
 } from 'react-native-actgeo'; 
-'''
+```
 
 ### Initialise SDK 
 
 Initializes the SDK with the necessary configuration parameters. 
 
-'''
+```
 initSDK( 
     apiKey: string, 
     baseURL: string 
 ): Promise<void>; 
-'''
+```
 
 ### Parameters 
 
@@ -69,7 +69,7 @@ A Promise that resolves when the SDK is successfully initialized or rejects with
 
 ### Usage Example 
 
-'''
+```
 import { initSDK } from 'react-native-actgeo'; 
  
 // Initialize SDK 
@@ -81,13 +81,13 @@ initSDK(
 }).catch((err) => { 
   console.error("SDK initialization failed:", err); 
 }); 
-'''
+```
 
 ### Starts the location monitoring 
 
-'''
+```
 start(): Promise<string>; 
-'''
+```
 
 ### Returns 
 
@@ -95,7 +95,7 @@ A Promise that resolves with a confirmation message (string) when the monitoring
 
 ### Usage Example 
 
-'''
+```
 import { start } from 'react-native-actgeo'; 
  
 // Start location monitoring 
@@ -106,13 +106,13 @@ start()
   .catch((err) => { 
     console.error("Failed to start location monitoring:", err); 
   }); 
-'''
+```
 
 ### Stops the location monitoring 
 
-'''
+```
 stop(): Promise<string>; 
-'''
+```
 
 ### Returns 
 
@@ -120,7 +120,7 @@ A Promise that resolves with a confirmation message (string) when the monitoring
 
 ### Usage Example 
 
-'''
+```
 import { stop } from 'react-native-actgeo'; 
  
 // Stop location monitoring 
@@ -131,7 +131,7 @@ stop()
   .catch((err) => { 
     console.error("Failed to stop location monitoring:", err); 
   }); 
-'''
+```
 
 Android Only: Clears the internal state of the SDK and stops any ongoing processes. 
 
