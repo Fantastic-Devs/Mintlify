@@ -139,3 +139,41 @@ stop()
 ```
 destroy(): Promise<string>; 
 ```
+
+## Returns 
+
+A Promise that resolves with a confirmation message (string) when the SDK is successfully cleared and destroyed or rejects with an error. 
+
+## Usage Example 
+
+```
+import { destroy } from 'react-native-actgeo'; 
+ 
+// Destroy the SDK instance 
+destroy() 
+  .then((message) => { 
+    console.log("SDK successfully destroyed:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to destroy SDK:", err); 
+  }); 
+```
+ 
+Requests the current location status 
+
+Requests the current location status based on the provided account ID and reason for lookup. 
+
+```
+sendLocationCheck( 
+  accountId: string, 
+  reasonForLookup: Int32 
+): Promise<string>; 
+``` 
+
+## Parameters 
+
+- **accountId (string):** The account ID associated with the location check. (Required) 
+
+- **reasonForLookup (Int32):** The reason for initiating the location check, represented as an integer. (Required) 
+ 
+## Returns
