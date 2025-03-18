@@ -52,3 +52,38 @@ initSDK(
     baseURL: string 
 ): Promise<void>; 
 ```
+### Parameters 
+
+- **apiKey** (string): The API key for authentication. (Required) 
+
+- **baseURL** (string): The base URL of the service. (Required) 
+
+### Returns 
+
+A Promise that resolves when the SDK is successfully initialized or rejects with an error. 
+
+### Usage Example 
+
+```
+import { initSDK } from 'react-native-actgeo'; 
+ 
+// Initialize SDK 
+initSDK( 
+  "your-api-key", 
+  "https://example.com" 
+).then((result) => { 
+  console.log("SDK initialized:", result); 
+}).catch((err) => { 
+  console.error("SDK initialization failed:", err); 
+}); 
+```
+
+### Starts the location monitoring 
+
+```
+start(): Promise<string>; 
+```
+
+### Returns 
+
+A Promise that resolves with a confirmation message (string) when the monitoring starts successfully or rejects with an error. 
