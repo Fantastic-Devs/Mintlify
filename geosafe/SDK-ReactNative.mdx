@@ -26,13 +26,13 @@ The `ACT GEO React Native` SDK provides seamless integration with the ActGeo pla
 
 ### Installation 
 
-```react
+```javascript 
 npm install react-native-actgeo 
 ```
 
 ### Usage 
 
-```
+```javascript 
 import { 
   initSDK, 
   start, 
@@ -46,7 +46,7 @@ import {
 
 Initializes the SDK with the necessary configuration parameters. 
 
-```
+```javascript 
 initSDK( 
     apiKey: string, 
     baseURL: string 
@@ -64,7 +64,7 @@ A Promise that resolves when the SDK is successfully initialized or rejects with
 
 ### Usage Example 
 
-```
+```javascript 
 import { initSDK } from 'react-native-actgeo'; 
  
 // Initialize SDK 
@@ -80,7 +80,7 @@ initSDK(
 
 ### Starts the location monitoring 
 
-```
+```javascript 
 start(): Promise<string>; 
 ```
 
@@ -90,7 +90,7 @@ A Promise that resolves with a confirmation message (string) when the monitoring
 
 ### Usage Example 
 
-```
+```javascript 
 import { start } from 'react-native-actgeo'; 
  
 // Start location monitoring 
@@ -105,7 +105,7 @@ start()
 
 ### Stops the location monitoring 
 
-```
+```javascript 
 stop(): Promise<string>; 
 ```
 
@@ -115,7 +115,7 @@ A Promise that resolves with a confirmation message (string) when the monitoring
 
 ### Usage Example 
 
-```
+```javascript 
 import { stop } from 'react-native-actgeo'; 
  
 // Stop location monitoring 
@@ -136,7 +136,7 @@ stop()
     Clears the internal state of the SDK and stops any ongoing processes. 
   </Card>
 </CardGroup>
-```
+```javascript 
 destroy(): Promise<string>; 
 ```
 
@@ -146,7 +146,7 @@ A Promise that resolves with a confirmation message (string) when the SDK is suc
 
 ## Usage Example 
 
-```
+```javascript 
 import { destroy } from 'react-native-actgeo'; 
  
 // Destroy the SDK instance 
@@ -163,7 +163,7 @@ Requests the current location status
 
 Requests the current location status based on the provided account ID and reason for lookup. 
 
-```
+```javascript 
 sendLocationCheck( 
   accountId: string, 
   reasonForLookup: Int32 
@@ -194,7 +194,7 @@ The promise rejects with an error if the location check fails.
 
 ## Usage Example 
  
-```
+```javascript 
 import { sendLocationCheck } from 'react-native-actgeo'; 
  
 // Perform a location check 
@@ -220,7 +220,7 @@ Please place the debug and release .aar files in the following respective locati
 
 Include network and location-related permissions in the AndroidManifest.xml file 
 
-```
+```javascript 
 <uses-permission android:name="android.permission.INTERNET"/> 
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> 
@@ -229,7 +229,7 @@ Include network and location-related permissions in the AndroidManifest.xml file
  
 In the project's Gradle file, add the following configuration: 
 
-``` 
+```javascript 
 allprojects { 
     repositories { 
         ... 
@@ -242,7 +242,7 @@ allprojects {
  
 In the app's Gradle file, include the following: 
  
-```
+```javascript 
 dependencies { 
     ... 
  
@@ -264,7 +264,7 @@ dependencies {
 
 Add the necessary permissions in your `Info.plist`: 
 
-```
+```javascript 
  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key> 
    <string>We need access to your location for providing location-based services.</string> 
    <key>NSLocationWhenInUseUsageDescription</key> 
