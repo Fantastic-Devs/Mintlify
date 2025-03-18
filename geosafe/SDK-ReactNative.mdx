@@ -87,3 +87,43 @@ start(): Promise<string>;
 ### Returns 
 
 A Promise that resolves with a confirmation message (string) when the monitoring starts successfully or rejects with an error. 
+
+### Usage Example 
+
+```
+import { start } from 'react-native-actgeo'; 
+ 
+// Start location monitoring 
+start() 
+  .then((message) => { 
+    console.log("Location monitoring started:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to start location monitoring:", err); 
+  }); 
+```
+
+### Stops the location monitoring 
+
+```
+stop(): Promise<string>; 
+```
+
+### Returns 
+
+A Promise that resolves with a confirmation message (string) when the monitoring stops successfully or rejects with an error. 
+
+### Usage Example 
+
+```
+import { stop } from 'react-native-actgeo'; 
+ 
+// Stop location monitoring 
+stop() 
+  .then((message) => { 
+    console.log("Location monitoring stopped:", message); 
+  }) 
+  .catch((err) => { 
+    console.error("Failed to stop location monitoring:", err); 
+  }); 
+```
