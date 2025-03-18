@@ -1,6 +1,6 @@
 ---
-title: 'SDK Integration (React Native)'
-description: 'ACT GEOSAFE – React Native SDK '
+title: 'SDK Integration (Xamarin)'
+description: 'ACT GEOSAFE – Xamarin SDK '
 icon: 'book-open-cover'
 ---
 
@@ -56,7 +56,7 @@ The ACT GEO Xamarin SDK provides integration with the Act.Geo platform, enabling
 
 The `ACTGeoSDK` class is used to manage the iOS SDK's location functionality. To initialize, call the `InstallWithApiKey` method: 
 
-```
+```C#
 using ACTGeoSDKBinding; 
  
 var config = new Config() 
@@ -70,7 +70,7 @@ ACTGeoSDK.Shared.InstallWithApiKey("your-api-key", config);
 
 You can optionally set delegates for initialization and checks: 
 
-```
+```C#
 ACTGeoSDK.Shared.SetInitDelegate(new InitDelegate()); 
 ACTGeoSDK.Shared.SetCheckDelegate(new CheckDelegate()); 
  
@@ -112,7 +112,7 @@ public class CheckDelegate : ACTCheckDelegate
 
 To start location tracking: 
 
-```
+```C#
 ACTGeoSDK.Shared.StartChecks(new CheckDelegate()); 
 ```
 
@@ -120,7 +120,7 @@ ACTGeoSDK.Shared.StartChecks(new CheckDelegate());
 
 To stop location tracking: 
 
-```
+```C#
 ACTGeoSDK.Shared.StopChecks(); 
 ```
 
@@ -128,7 +128,7 @@ ACTGeoSDK.Shared.StopChecks();
 
 To perform a location check and retrieve the status: 
 
-```
+```C#
 ACTGeoSDK.Shared.RequestLocationStatusWithAccountID("accountId123", 1, result => 
 { 
     if (result != null) 
@@ -148,7 +148,7 @@ ACTGeoSDK.Shared.RequestLocationStatusWithAccountID("accountId123", 1, result =>
 
 The `LocationHandler` class is used to manage location-based functionality. To get an instance of `LocationHandler`, use the `GetInstance` method with the required parameters: 
  
-```
+```C#
 var locationHandler = LocationHandler.GetInstance(context, apiKey, baseUrl); 
 locationHandler.Initialize(callback); 
 ``` 
@@ -161,7 +161,7 @@ locationHandler.Initialize(callback);
 
 - **baseURL** (string): The base URL of the service. *(Required)* 
 
-```
+```C#
 using Com.Fantastic.Sdk; 
  
 var context = Android.App.Application.Context; 
@@ -210,7 +210,7 @@ To start location tracking, use the `Start()` method of the `LocationHandler` in
 
 Example  
 
-```
+```C#
 locationHandler.Start(); 
 ```
 
@@ -220,7 +220,7 @@ To stop location tracking, simply call the `Stop()` method on the `LocationHandl
 
 Example  
 
-```
+```C#
 locationHandler.Stop(); 
 ```
  
@@ -230,7 +230,7 @@ To destroy the `LocationHandler` instance, call the `Destroy()` method:
 
 Example 
 
-```
+```C#
 locationHandler.Destroy(); 
 ```
  
@@ -238,7 +238,7 @@ locationHandler.Destroy();
 
 To perform a location check: 
 
-```
+```C#
 locationHandle.RequestLocationStatus(accountId, reason, completion); 
 ```
  
@@ -256,7 +256,7 @@ locationHandle.RequestLocationStatus(accountId, reason, completion);
 
 1. Add the necessary permissions in your `Info.plist`: 
  
-```
+```C#
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key> 
    <string>We need access to your location for providing location-based services.</string> 
    <key>NSLocationWhenInUseUsageDescription</key> 
@@ -273,7 +273,7 @@ locationHandle.RequestLocationStatus(accountId, reason, completion);
 
 1. Include permissions in `AndroidManifest.xml`: 
 
-```
+```C#
    <uses-permission android:name="android.permission.INTERNET"/> 
    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> 
    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
