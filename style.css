@@ -34,3 +34,7 @@ span.green {
 span.maroon {
   color: maroon;
 }
+
+div.oldform {
+  display: none;  
+}
