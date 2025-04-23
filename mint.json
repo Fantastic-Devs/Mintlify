@@ -23,10 +23,16 @@
       "url": "mailto:support@advancedcompliance.tech"
     }
   ],
-  "topbarCtaButton": {
-    "name": "Demo",
-    "url": "https://demo.advancedcompliance.tech"
-  },
+  "topbarCtaButton": [
+    {
+      "label": "Geosafe Console",
+      "href": "https://demo.advancedcompliance.tech"
+    },
+    {
+      "label": "ACT Verify QR generator",
+      "href": "https://yourdomain.com/get-started"
+    }
+  ],
   "tabs": [
     {
       "name": "API Reference",
