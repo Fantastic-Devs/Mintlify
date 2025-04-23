@@ -141,20 +141,18 @@
     "navbar": {
         "links": [
             {
+                "label": "ACT Geosafe Console",
+                "href": "https://demo.advancedcompliance.tech"
+            },
+            {
+                "label": "ACT Verify QR Generator",
+                "href": "mailto:support@advancedcompliance.tech"
+            },
+            {
                 "label": "Support",
                 "href": "mailto:support@advancedcompliance.tech"
             }
         ],
-        "topbarCtaButton": [
-    {
-      "label": "Geosafe Console",
-      "href": "https://demo.advancedcompliance.tech"
-    },
-    {
-      "label": "ACT Verify QR generator",
-      "href": "https://yourdomain.com/get-started"
-    }
-  ],
         "primary": {
             "type": "button",
             "label": "Demo",
