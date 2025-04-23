@@ -44,7 +44,7 @@
                         ]
                     },
                     {
-                        "tab": "ACT Verify ID",
+                        "tab": "ACT ID (KYC)",
                         "groups": [
                             {
                                 "group": "Contact US",
@@ -102,7 +102,7 @@
                         ]
                     },
                     {
-                        "tab": "ACT Verify ID",
+                        "tab": "ACT ID (KYC)",
                         "groups": [
                             {
                                 "group": "Contate-nos",
