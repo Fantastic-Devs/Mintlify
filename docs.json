@@ -62,7 +62,8 @@
                                 "group": "Contact US",
                                 "pages": [
                                     "contact/submission-form",
-                                    "contact/contact-us-form"
+                                    "contact/contact-us-form",
+                                    "contact/help-center"
                                 ]
                             }
                         ]
