@@ -54,7 +54,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Inside location</b><br />
+      <b>Inside location (Code 0)</b><br />
           This is returned if the device requests a location from within the designated jurisdiction
     </td>
   </tr>
@@ -65,7 +65,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Outside location</b><br />
+      <b>Outside location (Code 3)</b><br />
           This is returned by the middleware when it detects that the device is outside of location
     </td>
   </tr>
@@ -76,7 +76,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Device not supported</b><br />
+      <b>Device not supported (Code 2)</b><br />
           This is returned when the SDK detects that the device does not support GPS
     </td>
   </tr>
@@ -87,7 +87,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Unknown location</b><br />
+      <b>Unknown location (Code 1)</b><br />
           This is returned if the device requests a location check before the service has completely started and therefore, we do not have a current location for the device.
     </td>
   </tr>
@@ -98,7 +98,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Location disabled</b><br />
+      <b>Location disabled (Code 5)</b><br />
           This is returned when the SDK detects that the device has disabled its GPS
     </td>
   </tr>
@@ -109,7 +109,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Modified device</b><br />
+      <b>Modified device (Code 6)</b><br />
           This is returned if the SDK detects that the device is jailbroken
     </td>
   </tr>
@@ -120,7 +120,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Location Simulated by Software</b><br />
+      <b>Location Simulated by Software (Code 7)</b><br />
           This is returned if the SDK detects that the location is simulated by software (i.e. FakeGPS)
     </td>
   </tr>
@@ -131,7 +131,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Undetermined location</b><br />
+      <b>Undetermined location (Code 8)</b><br />
           Should never happen – occurs when we have bad config in the DB for that app and not able to determine if it is inside or not
     </td>
   </tr>
@@ -142,7 +142,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Developer Mode</b><br />
+      <b>Developer Mode (Code 9)</b><br />
           This is returned if the SDK detects that device is running in developer mode
     </td>
   </tr>
@@ -153,7 +153,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Device Blocked</b><br />
+      <b>Device Blocked (Code 10)</b><br />
           This is returned if the backend system finds this device on a blocked accounts list
     </td>
   </tr>
@@ -164,7 +164,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Account Blocked</b><br />
+      <b>Account Blocked (Code 11)</b><br />
           This is returned if the backend system finds this account on a blocked accounts list
     </td>
   </tr>
@@ -175,7 +175,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Global Blocked</b><br />
+      <b>Global Blocked (Code 13)</b><br />
           This is returned when the middleware detects that the Device is on the GeoSafe’s Global Blocked list, which means the device is blocked across all jurisdictions
     </td>
   </tr>
@@ -186,7 +186,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Proxy Detected</b><br />
+      <b>Proxy Detected (Code 12)</b><br />
           This is returned if the backend system finds determines that this device is running a VPN
     </td>
   </tr>
@@ -197,7 +197,7 @@ There are 3 filters that can be applied to the map, they are available on the to
     </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>
-      <b>Other</b><br />
+      <b>Other (Code 4)</b><br />
          Any other reason other than these listed 
     </td>
   </tr>
