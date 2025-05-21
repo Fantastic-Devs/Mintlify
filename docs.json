@@ -52,7 +52,8 @@
                                 "group": "Contact US",
                                 "pages": [
                                     "id/id",
-                                    "id/integration"
+                                    "id/integration",
+                                    "id/previous_versions/version_list"
                                 ]
                             }
                         ]
