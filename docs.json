@@ -31,14 +31,16 @@
                                     "geosafe/SDK-iOS",
                                     "geosafe/SDK-Android",
                                     "geosafe/SDK-ReactNative",
-                                    "geosafe/SDK-Xamarin"
+                                    "geosafe/SDK-Xamarin",
+                                    "geosafe/previous_versions/version_list"
                                 ]
                             },
                             {
                                 "group": "ACT Verify",
                                 "pages": [
                                     "verify/overview",
-                                    "verify/SDK-Web"
+                                    "verify/SDK-Web",
+                                    "verify/previous_versions/version_list"
                                 ]
                             }
                         ]
