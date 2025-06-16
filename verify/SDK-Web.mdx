@@ -143,31 +143,31 @@ This should be executed from your backend server (server-to-server) for enhanced
 
 #### **Usage**:
 
-**Endpoint:**
+#### **Endpoint:**
 
 https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession
 
-**Method:**
+#### **Method:**
 
 GET
 
-**Required Headers:**
+#### **Required Headers:**
 
 Content-Type: application/x-www-form-urlencoded
 
-**Query Parameters:**
+#### **Query Parameters:**
 
 apiKey – Your assigned API key
 accountId – your account Id
 sessionId – The session token to validate
 
-**Sample cURL Request:**
+#### **Sample cURL Request:**
 
 curl -X POST "https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession?apiKey=YOUR_API_KEY&accountId=ACCOUNT_ID&sessionId=SESSION_ID" \
   -H "Content-Type: application/x-www-form-urlencoded"
 Replace YOUR_API_KEY, ACCOUNT_ID, and SESSION_ID with actual values.
 
-**Sample Response:**
+#### **Sample Response:**
 
 {
   "Status": <number>,
@@ -176,7 +176,7 @@ Replace YOUR_API_KEY, ACCOUNT_ID, and SESSION_ID with actual values.
   "ApiVersion": "<string>"
 }
 
-**Status Code Reference**
+#### **Status Code Reference**
 
 1 – Pending
 2 – Success (valid session)
