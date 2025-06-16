@@ -137,31 +137,31 @@ Secure Call
 
 This should be executed from your backend server (server-to-server) for enhanced security.
 
-#### **Returns**:
+##### **Returns**:
 
 - A promise that resolves to an object containing session details if the session is valid.
 
 #### **Usage**:
 
-#### **Endpoint:**
+##### **Endpoint:**
 
 https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession
 
-#### **Method:**
+##### **Method:**
 
 GET
 
-#### **Required Headers:**
+##### **Required Headers:**
 
 Content-Type: application/x-www-form-urlencoded
 
-#### **Query Parameters:**
+##### **Query Parameters:**
 
 - `apiKey` – Your assigned API key
 - `accountId` – your account Id
 - `sessionId` – The session token to validate
 
-#### **Sample cURL Request:**
+##### **Sample cURL Request:**
 
 ```curl
 curl -X POST "https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession?apiKey=YOUR_API_KEY&accountId=ACCOUNT_ID&sessionId=SESSION_ID" \
@@ -170,6 +170,18 @@ Replace YOUR_API_KEY, ACCOUNT_ID, and SESSION_ID with actual values.
 ```
 
 
+
+
+
+#### **Status Code Reference**
+
+- 1 – Pending
+- 2 – Success (valid session)
+- 3 – Failure
+- 4 – Expired
+- 9 – Missing session ID parameter
+- 12 – Backend error
+- 42 – Missing session
 
 
 
