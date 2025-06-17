@@ -8,6 +8,23 @@ icon: 'location-dot'
 
 ACT Verify Introduction to be added here
 
+```mermaid
+---
+config:
+      theme: redux
+---
+flowchart TD
+        
+        B["User Presses login button"]
+        B --> C["User enters their credentials"]
+        C --> D["User logged in successfully"]
+        D --> E["QR code displayed"]
+        E --> F["User scans QR code"]
+        F --> G["Web Socket replys with Success (status 2)"]
+        G --> H["Server to Server checks valid session"]
+        H --> I["QR code removed"]
+```
+
 #### Initialise 
 
 The first call to the SDK is the Initialization call.  This requires an API Key to identify who you are and what Jurisdiction you are licensed to. 
