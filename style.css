@@ -27,6 +27,11 @@ img.mobile {
   height: 300px;
 }
 
+img.screen {
+  border: 1px solid #A30A55;
+  height: 300px;
+}
+
 span.green {
   color: green;
   }
