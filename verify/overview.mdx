@@ -40,6 +40,14 @@ Once installed, the SDK needs to be configured with three key pieces of informat
 
 - The base URL of our service
 
+##### Returns:
+- A promise that resolves to the server’s sdk initialization response, usually a JSON object containing sdk initialization information.
+- The Response contains the following:
+  - status (number): Indicates the status api response. (0 for success).
+  - sessionId (string): A unique identifier for the session.
+  - expiryTime (number): The session expiry time in timestamp format.
+  - qrCode (string): Base64 image data of qr code.
+
 This setup tells the SDK which jurisdiction to validate the customer against.
 
 #### Step 3: Present the QR Code or Prompt
