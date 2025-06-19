@@ -35,23 +35,21 @@ The first step is to integrate our SDK into your application. This SDK handles t
 Once installed, the SDK needs to be configured with three key pieces of information:
 
 - Your API Key
-
 - Your Account ID
-
 - The base URL of our service
 
 ##### Returns:
 - A promise that resolves to the server’s sdk initialization response, usually a JSON object containing sdk initialization information.
 - The Response contains the following:
-  - status (number): Indicates the status api response. (0 for success).
-  - sessionId (string): A unique identifier for the session.
-  - expiryTime (number): The session expiry time in timestamp format.
-  - qrCode (string): Base64 image data of qr code.
+  - An api response indicating the status (0 for success).
+  - The sessionId, a unique identifier for the session.
+  - The session expiry time in timestamp format.
+  - A Base64 image data of qr code.
 
 This setup tells the SDK which jurisdiction to validate the customer against.
 
-#### Step 3: Present the QR Code or Prompt
-After the SDK is ready, your application can present a QR code (or another method) to the customer. This begins the geolocation process, allowing the customer to share their location securely through their mobile device.
+#### Step 3: Present the QR Code
+After the SDK is ready, your application can present a QR code to the customer. This begins the geolocation process, allowing the customer to share their location securely through their mobile device.
 
 #### Step 4: Start the Location Validation
 At this point, the SDK checks whether it can start the customer’s session. A successful start means the location request is active and we’re waiting for the customer’s device to respond.
@@ -59,11 +57,8 @@ At this point, the SDK checks whether it can start the customer’s session. A s
 The SDK tracks the session’s status:
 
 - Pending – Waiting for the customer to complete the process.
-
 - Success – Customer location validated and in the correct jurisdiction.
-
 - Failure/Expired – Something went wrong or the session timed out.
-
 - Missing Info – For example, if a session ID is not present or valid.
 
 #### Step 5: Server-to-Server Validation
@@ -74,13 +69,9 @@ If you ever need to manually end the customer’s geolocation session — for ex
 
 #### Summary Flow
 - Install and configure the SDK.
-
 - Present the QR code to the customer.
-
 - Start the geolocation check.
-
 - Confirm the result from your backend.
-
 - End the session if necessary.
 
 This process helps ensure compliance, reduce fraud, and give your customers a smooth, secure experience.
