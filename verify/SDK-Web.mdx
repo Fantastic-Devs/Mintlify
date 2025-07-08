@@ -5,7 +5,7 @@ icon: 'globe'
 ---
 <a style={{ color: '#A30A54', fontStyle: 'italic', fontWeight: 300 }} href="previous_versions/version_list">Previous Versions</a>
 
-The **_ActGeo Web SDK_** is a library designed to handle location validation and session management for web and mobile applications. It allows you to request location permissions, generate session tokens with QR codes, send location data to a server, and validate the user's location.
+The **ActGeo Web SDK** is a library designed to handle location validation and session management for web and mobile applications. It allows you to request location permissions, generate session tokens with QR codes, send location data to a server, and validate the user's location.
 
 ## **Installation**
 
@@ -14,20 +14,19 @@ To use the SDK in your project, you need to install it locally via npm or yarn.
 ### **1. Install via npm:**
 
 ```bash
-npm install actgeowebsdk
+npm install actgeobrowsersdk
 ```
-
-### **2. Add to your HTML file (for direct use in browser):**
+### **2. OR add to your HTML file (for direct use in browser):**
 
 ```html
-<script src="path/to/actgeowebsdk/actgeo-web-sdk.js"></script>
+<script src="path/to/actgeobrowsersdk/actgeo-browser-sdk.js"></script>
 ```
 
 ## **Usage**
 
 After installation, you can initialize and use the SDK in your application as follows:
 
-### **Initialize SDK Get Session Id and QR Code**
+### **Initialize SDK Get Session ID and QR Code**
 
 The first step is to initialize the SDK with an API key and the base URL of your server. This step is mandatory before using any other methods.
 
@@ -109,7 +108,15 @@ After successfully initializing the SDK with a QR Code, use this method to start
 
 ##### **Response Object**
 
-- `status` (number): Indicates the status of the session. (1 for pending, 2 for success, 3 for failure, 4 for expired, 9 for missing session id parameter, 12 for backend error, 42 for missing session id).
+- `status` (number): Indicates the status of the session. (
+  - 1 for pending, 
+  - 2 for success, 
+  - 3 for failure, 
+  - 4 for expired, 
+  - 9 for missing session id parameter, 
+  - 12 for backend error, 
+  - 42 for missing session id
+- ).
 - `expiryTime` (number): The session expiry time in timestamp format.
 
 #### **Usage**:
@@ -133,53 +140,48 @@ ActGeo.StartLocationValidation(
 
 The `RequestSessionCheck` method is used to verify the current status of a user session with the server.
 
-Secure Call
+#### **Secure Call**:
 
 This should be executed from your backend server (server-to-server) for enhanced security.
 
-##### **Returns**:
+#### **Returns**:
 
 - A promise that resolves to an object containing session details if the session is valid.
 
 #### **Usage**:
 
-##### **Endpoint:**
+#####Endpoint:
 
+```javascript
 https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession
-
-##### **Method:**
+```
+##### Method:
 
 GET
 
-##### **Required Headers:**
+##### Required Headers:
 
 Content-Type: application/x-www-form-urlencoded
 
-##### **Query Parameters:**
+##### Query Parameters:
 
-- `apiKey` – Your assigned API key
-- `accountId` – your account Id
-- `sessionId` – The session token to validate
+- **apiKey** – Your assigned API key
+- **accountId** – your account Id
+- **sessionId** – The session token to validate
 
-##### **Sample cURL Request:**
+##### Sample cURL Request:
 
 ```curl
 curl -X POST "https://sandbox-api.advancedcompliance.tech/api/v1.2/Web/CheckSession?apiKey=YOUR_API_KEY&accountId=ACCOUNT_ID&sessionId=SESSION_ID" \
   -H "Content-Type: application/x-www-form-urlencoded"
 Replace YOUR_API_KEY, ACCOUNT_ID, and SESSION_ID with actual values.
-```
+​```
 
+##### Sample Response:
+“Status”: <number>, “SessionId”: <“string”>, “ExpiryTime”: <timestamp>, “ApiVersion”: <“string”>
 
-#### **Sample Response:**
-
-
-  "Status": &lt;number&gt;,
-  "SessionId": &lt;"string"&gt;,
-  "ExpiryTime": &lt;timestamp&gt;,
-  "ApiVersion": &lt;"string"&gt;
-
-
-#### **Status Code Reference**
+​
+##### Status Code Reference
 
 - 1 – Pending
 - 2 – Success (valid session)
@@ -188,8 +190,6 @@ Replace YOUR_API_KEY, ACCOUNT_ID, and SESSION_ID with actual values.
 - 9 – Missing session ID parameter
 - 12 – Backend error
 - 42 – Missing session
-
-
 
 ```javascript
 ActGeo.RequestSessionCheck()
