@@ -50,5 +50,5 @@ div.oldform {
 
 table.fullwidth {
   width: 100%;
-  display: none;
+  display: inline-table;
 }
