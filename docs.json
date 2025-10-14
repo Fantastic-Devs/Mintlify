@@ -51,9 +51,9 @@
                             {
                                 "group": "ACT Sports Integrity",
                                 "pages": [
-                                    "id/id",
-                                    "id/integration",
-                                    "id/previous_versions/version_list"
+                                    "si/integration",
+                                    "si/si",
+                                    "si/troubleshooting"
                                 ]
                             }
                         ]
