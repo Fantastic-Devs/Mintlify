@@ -40,6 +40,10 @@ span.maroon {
   color: maroon;
 }
 
+span.material-symbols-outlined {
+  font-size: 20px;
+}
+
 div.oldform {
   display: none;  
 }
