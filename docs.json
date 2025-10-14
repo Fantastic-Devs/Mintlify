@@ -51,8 +51,8 @@
                             {
                                 "group": "ACT Sports Integrity",
                                 "pages": [
-                                    "si/integration",
                                     "si/si",
+                                    "si/integration",
                                     "si/troubleshooting"
                                 ]
                             }
