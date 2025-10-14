@@ -46,6 +46,19 @@
                         ]
                     },
                     {
+                        "tab": "ACT Sports Integrity",
+                        "groups": [
+                            {
+                                "group": "Contact US",
+                                "pages": [
+                                    "id/id",
+                                    "id/integration",
+                                    "id/previous_versions/version_list"
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "tab": "ACT ID (KYC)",
                         "groups": [
                             {
