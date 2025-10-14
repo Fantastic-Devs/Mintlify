@@ -47,11 +47,3 @@ div.oldform {
 h3 {
   margin-top: 0.2em; /* or any value you prefer */
 }
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 36
-}
