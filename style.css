@@ -43,3 +43,7 @@ span.maroon {
 div.oldform {
   display: none;  
 }
+
+h3 {
+  margin-top: 0.5em; /* or any value you prefer */
+}
