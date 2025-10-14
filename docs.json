@@ -62,7 +62,7 @@
                         "tab": "ACT ID (KYC)",
                         "groups": [
                             {
-                                "group": "Contact US",
+                                "group": "ACT ID (KYC)",
                                 "pages": [
                                     "id/id",
                                     "id/integration",
