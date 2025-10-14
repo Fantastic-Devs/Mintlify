@@ -47,3 +47,7 @@ span.material-symbols-outlined {
 div.oldform {
   display: none;  
 }
+
+table.fullwidth {
+  width: 100%;
+}
