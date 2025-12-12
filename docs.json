@@ -83,6 +83,7 @@
                                 "pages": [
                                     "contact/submission-form",
                                     "contact/contact-us-form",
+                                    "contact/demo-access",
                                     "contact/help-center"
                                 ]
                             }
